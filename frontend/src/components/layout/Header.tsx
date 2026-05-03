@@ -65,7 +65,7 @@ export const Header = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden absolute top-20 left-0 w-full bg-white shadow-lg border-t border-gray-100 flex flex-col py-4 px-4 gap-4">
+        <div className="lg:hidden absolute top-20 left-0 w-full bg-white shadow-lg border-t border-gray-100 flex flex-col py-4 px-4 gap-4 pointer-events-auto">
           {links.map((link) => {
             const isActive = pathname === link.href;
             return (

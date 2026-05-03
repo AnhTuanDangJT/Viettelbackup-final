@@ -166,7 +166,7 @@ export function AboutUsRedSection() {
           transform: 'scaleY(-1) scaleX(-1)'
         }} 
       />
-      <div className="relative z-[2] mx-auto max-w-[1440px] min-h-full">
+      <div className="relative z-[12] mx-auto max-w-[1440px] min-h-full">
         {/* Header: VỀ CHÚNG TÔI */}
         <h2
           className="absolute font-beausans font-bold uppercase z-[10]"

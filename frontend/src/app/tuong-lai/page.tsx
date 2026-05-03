@@ -171,6 +171,65 @@ const heroSlides = [
   "/images/tuong-lai/slideshow/s6.png",
 ];
 
+const heroFeatures = [
+  {
+    title: "ĐA DỊCH VỤ",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+        <circle cx="27.5" cy="27.5" r="27.5" fill="white"/>
+        <path d="M18.2 24C18.2 22.7385 19.242 21.716 20.5273 21.716H32.3818C33.6671 21.716 34.7091 22.7385 34.7091 24L36.2 36.116C36.2 37.3774 35.158 38.4 33.8727 38.4H19.3273C18.042 38.4 17 37.3774 17 36.116L18.2 24Z" fill="white"/>
+        <path d="M30.2 24.6V21.6C30.2 19.6118 28.5882 18 26.6 18C24.6118 18 23 19.6118 23 21.6V24.6M19.3273 38.4H33.8727C35.158 38.4 36.2 37.3774 36.2 36.116L34.7091 24C34.7091 22.7385 33.6671 21.716 32.3818 21.716H20.5273C19.242 21.716 18.2 22.7385 18.2 24L17 36.116C17 37.3774 18.042 38.4 19.3273 38.4Z" stroke="#EE0033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    )
+  },
+  {
+    title: "DẪN ĐẦU CÔNG NGHỆ",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+        <circle cx="27.5" cy="27.5" r="27.5" fill="white"/>
+        <line x1="19" y1="12" x2="19" y2="15" stroke="#EE0033" stroke-width="2"/>
+        <rect x="14" y="15" width="27" height="27" rx="4" fill="white" fill-opacity="0.2" stroke="#EE0033" stroke-width="2"/>
+        <rect x="18" y="19" width="19" height="19" rx="2" fill="white" fill-opacity="0.2" stroke="#EE0033" stroke-width="2"/>
+        <line x1="14" y1="21" x2="11" y2="21" stroke="#EE0033" stroke-width="2"/>
+        <line x1="44" y1="21" x2="41" y2="21" stroke="#EE0033" stroke-width="2"/>
+        <line x1="36" y1="45" x2="36" y2="42" stroke="#EE0033" stroke-width="2"/>
+        <line x1="27" y1="12" x2="27" y2="15" stroke="#EE0033" stroke-width="2"/>
+        <line x1="14" y1="29" x2="11" y2="29" stroke="#EE0033" stroke-width="2"/>
+        <line x1="44" y1="29" x2="41" y2="29" stroke="#EE0033" stroke-width="2"/>
+        <line x1="28" y1="45" x2="28" y2="42" stroke="#EE0033" stroke-width="2"/>
+        <line x1="35" y1="12" x2="35" y2="15" stroke="#EE0033" stroke-width="2"/>
+        <line x1="14" y1="37" x2="11" y2="37" stroke="#EE0033" stroke-width="2"/>
+        <line x1="44" y1="37" x2="41" y2="37" stroke="#EE0033" stroke-width="2"/>
+        <line x1="20" y1="45" x2="20" y2="42" stroke="#EE0033" stroke-width="2"/>
+      </svg>
+    )
+  },
+  {
+    title: "ĐA KÊNH",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+        <circle cx="27.5" cy="27.5" r="27.5" fill="white"/>
+        <path d="M27.8 31C27.8 33.9823 25.3823 36.4 22.4 36.4C19.4177 36.4 17 33.9823 17 31C17 28.0177 19.4177 25.6 22.4 25.6C25.3823 25.6 27.8 28.0177 27.8 31Z" fill="white"/>
+        <path d="M25.4 22.6C25.9457 20.1952 28.0963 18.4 30.6662 18.4C33.6485 18.4 36.0662 20.8177 36.0662 23.8C36.0662 26.5625 33.9918 28.8405 31.3157 29.1613M21.8 20.8L24.2 18.4L21.8 16M17 23.2V21.6C17 19.8327 18.4327 18.4 20.2 18.4H22.6M32.6 32.8L30.2 35.2L32.6 37.6M37.4 30.4V32C37.4 33.7673 35.9673 35.2 34.2 35.2H31.8M27.8 31C27.8 33.9823 25.3823 36.4 22.4 36.4C19.4177 36.4 17 33.9823 17 31C17 28.0177 19.4177 25.6 22.4 25.6C25.3823 25.6 27.8 28.0177 27.8 31Z" stroke="#EE0033" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    )
+  },
+  {
+    title: "TRẢI NGHIỆM XUẤT SẮC",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+        <circle cx="27.5" cy="27.5" r="27.5" fill="white"/>
+        <path d="M27.544 23.7575C27.544 25.4979 26.318 26.7347 24.8056 26.7347C23.2932 26.7347 22.0672 25.4979 22.0672 23.7575C22.0672 22.0171 23.2932 20.9771 24.8056 20.9771C26.318 20.9771 27.544 22.0171 27.544 23.7575Z" fill="white"/>
+        <path d="M31.9423 33.7586C31.9423 35.5488 29.8298 37 24.9711 37C20.1125 37 18 35.5488 18 33.7586C18 31.9685 21.1211 30.5173 24.9711 30.5173C28.8212 30.5173 31.9423 31.9685 31.9423 33.7586Z" fill="white"/>
+        <path d="M33.685 18L34.6725 20.1075L37 20.387L35.2828 21.9691L35.7338 24.2494L33.685 23.1197L31.6363 24.2494L32.0872 21.9691L30.3701 20.387L32.6975 20.1075L33.685 18Z" fill="white"/>
+        <path d="M27.544 23.7575C27.544 25.4979 26.318 26.7347 24.8056 26.7347C23.2932 26.7347 22.0672 25.4979 22.0672 23.7575C22.0672 22.0171 23.2932 20.9771 24.8056 20.9771C26.318 20.9771 27.544 22.0171 27.544 23.7575Z" stroke="#EE0033" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M31.9423 33.7586C31.9423 35.5488 29.8298 37 24.9711 37C20.1125 37 18 35.5488 18 33.7586C18 31.9685 21.1211 30.5173 24.9711 30.5173C28.8212 30.5173 31.9423 31.9685 31.9423 33.7586Z" stroke="#EE0033" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M33.685 18L34.6725 20.1075L37 20.387L35.2828 21.9691L35.7338 24.2494L33.685 23.1197L31.6363 24.2494L32.0872 21.9691L30.3701 20.387L32.6975 20.1075L33.685 18Z" stroke="#EE0033" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+    )
+  }
+];
+
 export default function TuongLaiPage() {
   const [expandedIds, setExpandedIds] = React.useState<string[]>([]);
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -284,7 +343,42 @@ export default function TuongLaiPage() {
             </div>
           </div>
         </div>
+
+        {/* 4 Items at the bottom */}
+        <div 
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-[1200px] px-6 z-20 grid grid-cols-4 gap-4 select-none justify-items-center"
+        >
+          {heroFeatures.map((feature, idx) => (
+            <div 
+              key={idx}
+              className="flex flex-col items-center justify-center text-center cursor-pointer group"
+            >
+              <motion.div 
+                className="w-[55px] h-[55px] mb-3 flex items-center justify-center rounded-full select-none"
+                whileHover={{ scale: 1.12, rotate: 3 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              >
+                {feature.icon}
+              </motion.div>
+              <span 
+                style={{
+                  color: '#FFF',
+                  fontFamily: 'var(--font-beausans), sans-serif',
+                  fontSize: '16px',
+                  fontStyle: 'normal',
+                  fontWeight: 600,
+                  lineHeight: 'normal',
+                  textTransform: 'uppercase',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                {feature.title}
+              </span>
+            </div>
+          ))}
+        </div>
       </section>
+
 
       {/* 2. TẦM NHÌN 2030 SECTION */}
       <section className="relative w-full bg-[#EE0033] overflow-hidden py-24 select-none">

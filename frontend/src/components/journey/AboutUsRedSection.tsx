@@ -225,7 +225,7 @@ export function AboutUsRedSection() {
               >
                 {item.title}
               </h3>
-              <div className="font-roboto opacity-80 flex justify-center">
+              <div className="font-roboto opacity-100 flex justify-center">
                 {item.content}
               </div>
             </div>

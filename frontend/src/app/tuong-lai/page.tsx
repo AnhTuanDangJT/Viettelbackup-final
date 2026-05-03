@@ -346,7 +346,7 @@ export default function TuongLaiPage() {
 
         {/* 4 Items at the bottom */}
         <div 
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-[1200px] px-6 z-20 grid grid-cols-4 gap-4 select-none justify-items-center"
+          className="absolute bottom-20 left-1/2 -translate-x-1/2 w-full max-w-[1200px] px-6 z-20 grid grid-cols-4 gap-4 select-none justify-items-center"
         >
           {heroFeatures.map((feature, idx) => (
             <div 

@@ -169,7 +169,7 @@ export function AboutUsRedSection() {
       <div className="relative z-[2] mx-auto max-w-[1440px] min-h-full">
         {/* Header: VỀ CHÚNG TÔI */}
         <h2
-          className="absolute font-beausans font-bold uppercase"
+          className="absolute font-beausans font-bold uppercase z-[10]"
           style={{
             top: '31px',
             left: '146px',
@@ -186,7 +186,7 @@ export function AboutUsRedSection() {
 
         {/* Paragraph: under the header */}
         <p
-          className="absolute font-roboto"
+          className="absolute font-roboto z-[10]"
           style={{
             top: '160px',
             left: '146px',

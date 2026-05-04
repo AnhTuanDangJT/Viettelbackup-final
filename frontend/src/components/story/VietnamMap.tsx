@@ -269,7 +269,7 @@ export const VietnamMap = () => {
           className="pointer-events-auto"
           style={{
             position: "absolute",
-            left: "450px",
+            left: "520px",
             top: "1055px",
             width: "3.017px",
             height: "3.855px",

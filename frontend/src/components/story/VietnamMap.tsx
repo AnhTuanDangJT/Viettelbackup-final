@@ -222,7 +222,7 @@ export const VietnamMap = () => {
           style={{
             position: "absolute",
             left: "385px",
-            top: "1065px",
+            top: "1070px",
             width: "65.374px",
             height: "52.299px",
           }}

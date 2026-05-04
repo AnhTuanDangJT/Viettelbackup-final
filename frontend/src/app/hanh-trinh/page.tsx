@@ -111,7 +111,7 @@ const HonorsStyles = () => (
       background: #F5F5F5 !important;
       border-radius: 28px;
       padding: 40px 60px;
-      opacity: 0.6;
+      opacity: 1 !important;
       z-index: 10;
       text-align: center;
       transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.8s ease;
@@ -122,15 +122,15 @@ const HonorsStyles = () => (
       align-items: center;
       will-change: transform, opacity;
     }
-    .left-near { transform: translate(-65%, -50%) scale(0.94); z-index: 80; opacity: 0.95; }
-    .left-mid { transform: translate(-78%, -50%) scale(0.88); z-index: 60; opacity: 0.8; }
-    .left-far { transform: translate(-88%, -50%) scale(0.82); z-index: 40; opacity: 0.6; }
-    .left-extra { transform: translate(-95%, -50%) scale(0.75); z-index: 20; opacity: 0.4; }
+    .left-near { transform: translate(-75%, -50%) scale(0.94); z-index: 80; opacity: 1 !important; }
+    .left-mid { transform: translate(-95%, -50%) scale(0.88); z-index: 60; opacity: 1 !important; }
+    .left-far { transform: translate(-110%, -50%) scale(0.82); z-index: 40; opacity: 1 !important; }
+    .left-extra { transform: translate(-125%, -50%) scale(0.75); z-index: 20; opacity: 1 !important; }
 
-    .right-near { transform: translate(-35%, -50%) scale(0.94); z-index: 80; opacity: 0.95; }
-    .right-mid { transform: translate(-22%, -50%) scale(0.88); z-index: 60; opacity: 0.8; }
-    .right-far { transform: translate(-12%, -50%) scale(0.82); z-index: 40; opacity: 0.6; }
-    .right-extra { transform: translate(-5%, -50%) scale(0.75); z-index: 20; opacity: 0.4; }
+    .right-near { transform: translate(-25%, -50%) scale(0.94); z-index: 80; opacity: 1 !important; }
+    .right-mid { transform: translate(-5%, -50%) scale(0.88); z-index: 60; opacity: 1 !important; }
+    .right-far { transform: translate(10%, -50%) scale(0.82); z-index: 40; opacity: 1 !important; }
+    .right-extra { transform: translate(25%, -50%) scale(0.75); z-index: 20; opacity: 1 !important; }
 
     .honor-year {
       color: #000 !important;
@@ -332,7 +332,7 @@ export default function HanhTrinhPage() {
             ) : (
               <>
                 <div className="space-y-[6px] pl-0 lg:pl-[90px] w-full lg:w-auto">
-                  {["Top 3 bán lẻ Việt Nam", "Top 2 Đông Nam Á", "Doanh thu TMĐT dẫn đầu", "Tỷ trọng online cao nhất", "Top 3 thương hiệu uy tín"].map((text, i) => (
+                  {["Top 3 bán lẻ Việt Nam", "Top 2 nhà mạng bán máy Đông Nam Á", "Doanh thu TMĐT dẫn đầu", "Tỷ trọng online cao nhất", "Top 3 thương hiệu uy tín"].map((text, i) => (
                     <div key={i} className="flex items-center gap-3 group">
                       <div className="w-3 h-3 bg-viettel rounded-full group-hover:scale-150 transition-transform"></div>
                       <span 
@@ -455,8 +455,8 @@ export default function HanhTrinhPage() {
                       </h4>
                       <ul className="space-y-0 text-left w-full">
                         {card.items.map((item, i) => (
-                          <li key={i} className={`flex items-center gap-3 ${idx === 1 && i === 0 ? "mt-4 lg:mt-8" : ""}`}>
-                            <span className="w-1.5 h-1.5 bg-viettel rounded-full shrink-0"></span>
+                          <li key={i} className={`flex items-start gap-3 ${idx === 1 && i === 0 ? "mt-4 lg:mt-8" : ""}`}>
+                            <span className="w-1.5 h-1.5 bg-viettel rounded-full shrink-0 mt-[6px]"></span>
                             <span 
                               style={{
                                 color: '#000',
@@ -548,16 +548,16 @@ export default function HanhTrinhPage() {
             })}
           </div>
 
-          <div className="flex justify-center gap-6 mt-20 relative z-30">
+          <div className="flex justify-center gap-6 mt-8 relative z-30">
             <button
               onClick={() => setAwardsActiveIndex((awardsActiveIndex - 1 + awards.length) % awards.length)}
-              className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white hover:text-viettel transition-all group"
+              className="w-14 h-14 rounded-full bg-white flex items-center justify-center border border-gray-200 text-black hover:text-[#EE0033] shadow-lg hover:shadow-xl transition-all group"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={() => setAwardsActiveIndex((awardsActiveIndex + 1) % awards.length)}
-              className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white hover:text-viettel transition-all group"
+              className="w-14 h-14 rounded-full bg-white flex items-center justify-center border border-gray-200 text-black hover:text-[#EE0033] shadow-lg hover:shadow-xl transition-all group"
             >
               <ChevronRight className="w-6 h-6" />
             </button>

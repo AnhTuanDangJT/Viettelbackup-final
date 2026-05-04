@@ -6,9 +6,10 @@ interface MilestoneCircleProps {
   milestone: Milestone;
   isActive: boolean;
   onClick: () => void;
+  isPriority?: boolean;
 }
 
-export const MilestoneCircle = memo(({ milestone, onClick }: MilestoneCircleProps) => {
+export const MilestoneCircle = memo(({ milestone, onClick, isPriority = false }: MilestoneCircleProps) => {
   return (
     <button
       type="button"
@@ -20,9 +21,10 @@ export const MilestoneCircle = memo(({ milestone, onClick }: MilestoneCircleProp
         src={milestone.image}
         alt={milestone.title}
         fill
-        sizes="(max-width: 768px) 240px, 300px"
-        priority
-        loading="eager"
+        sizes="(max-width: 640px) 240px, (max-width: 768px) 260px, 300px"
+        priority={isPriority}
+        loading={isPriority ? "eager" : "lazy"}
+        quality={75}
         className="object-cover transition-transform duration-500 group-hover:scale-110"
       />
 
@@ -107,16 +109,16 @@ export const MilestoneCircle = memo(({ milestone, onClick }: MilestoneCircleProp
         </p>
 
         {/* Icon under text */}
-        <div style={{ marginTop: '5px' }} className="hidden sm:block">
+        <div className="mt-1 sm:mt-2 filter drop-shadow-[0_4px_6px_rgba(0,0,0,0.7)] hover:scale-110 transition-transform duration-300">
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
-            width="25.439" 
-            height="25.439" 
+            width="34" 
+            height="34" 
             viewBox="0 0 26 26" 
             fill="none"
           >
-            <circle cx="12.7193" cy="12.7193" r="12.2193" stroke="white"/>
-            <path d="M9.46551 17.1563L17.1562 12.7193L9.46551 8.28233" stroke="white"/>
+            <circle cx="12.7193" cy="12.7193" r="12.2193" stroke="white" strokeWidth="1.5"/>
+            <path d="M9.46551 17.1563L17.1562 12.7193L9.46551 8.28233" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
       </div>

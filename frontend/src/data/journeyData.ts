@@ -196,7 +196,7 @@ export const journeyData: Milestone[] = [
     year: "2018",
     title: "Bứt phá quy mô",
     description: "Tăng trưởng mạnh về hệ thống cửa hàng và năng lực phục vụ khách hàng.",
-    image: "/images/journey/milestones/2018.png",
+    image: "/images/journey/milestones/2018.jpg",
     events: [
       {
         date: "Đầu năm 2018",
@@ -209,7 +209,7 @@ export const journeyData: Milestone[] = [
     year: "2019",
     title: "Vượt qua thử thách – Trở lại mạnh mẽ",
     description: "Thoát lỗ và quay lại quỹ đạo tăng trưởng bền vững.",
-    image: "/images/journey/milestones/2019.png",
+    image: "/images/journey/milestones/2019.jpg",
     events: [
       {
         date: "04/2019",
@@ -235,7 +235,7 @@ export const journeyData: Milestone[] = [
     year: "2021",
     title: "Tái định vị – Một diện mạo mới",
     description: "Chính thức mang tên Viettel Store với nhận diện thương hiệu mới.",
-    image: "/images/journey/milestones/2021.png",
+    image: "/images/journey/milestones/2021.jpg",
     events: [
       {
         date: "17/05/2021",
@@ -252,7 +252,7 @@ export const journeyData: Milestone[] = [
     year: "2022",
     title: "Số hóa toàn diện",
     description: "Đẩy mạnh chuyển đổi số toàn diện trong mọi hoạt động vận hành và kinh doanh.",
-    image: "/images/journey/milestones/2022.png",
+    image: "/images/journey/milestones/2022.jpg",
     events: [
       {
         date: "2022",

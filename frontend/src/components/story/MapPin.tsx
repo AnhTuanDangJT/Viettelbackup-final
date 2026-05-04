@@ -70,16 +70,16 @@ export const MapPin: React.FC<MapPinProps> = ({ name, className }) => {
       {/* Dynamic Name Overlay */}
       <div
         style={{
-          width: "53px",
+          width: "56px",
           height: "39px",
           color: "#FFF", // Red Text for white pin background
           textAlign: "center",
           fontFamily: "var(--font-beausans), 'FS PF BeauSans Pro', sans-serif",
-          fontSize: "13px",
+          fontSize: name.length > 8 ? "11px" : "12px",
           fontStyle: "normal",
-          fontWeight: 400,
+          fontWeight: 700,
           lineHeight: "1.1",
-          letterSpacing: "-0.78px",
+          letterSpacing: "-0.3px",
           textTransform: "uppercase",
           display: "flex",
           alignItems: "center",
@@ -87,11 +87,11 @@ export const MapPin: React.FC<MapPinProps> = ({ name, className }) => {
           position: "absolute",
           top: "22px", // Manually adjusted to fit in pin head
           zIndex: 1,
-          padding: "0 4px",
-          wordBreak: "break-word",
+          padding: "0 2px",
+          wordBreak: "normal",
         }}
       >
-        {name}
+        <span className="leading-[1.1]">{name}</span>
       </div>
     </motion.div>
   );

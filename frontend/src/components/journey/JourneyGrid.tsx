@@ -104,11 +104,12 @@ export const JourneyGrid: React.FC = () => {
             }}
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-2 justify-items-center items-center gap-6 sm:gap-10 md:gap-x-[158px] md:gap-y-[48px] w-full max-w-[280px] sm:max-w-none md:w-max"
           >
-            {currentItems.map((milestone) => (
+            {currentItems.map((milestone, idx) => (
               <MilestoneCircle
                 key={milestone.id}
                 milestone={milestone}
                 isActive={true}
+                isPriority={page === 0 && idx < 6}
                 onClick={() => {
                   setSelectedMilestone(milestone);
                   setIsModalOpen(true);

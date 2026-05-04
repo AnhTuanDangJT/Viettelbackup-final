@@ -118,7 +118,7 @@ const valueItems = [
         }}
         className="w-full max-w-[240px] sm:max-w-none min-h-0 lg:w-[190px] lg:h-[159px]"
       >
-        Chuyển dịch mạnh mẽ sang mô hình bán hàng đa kênh (Omnichannel), kết hợp hệ thống cửa hàng và nền tảng online. Không ngừng tối ưu trải nghiệm khách hàng với hệ thống CRM hiện đại.
+        Chuyển dịch mạnh mẽ sang mô hình bán hàng đa kênh (Omnichannel), kết hợp hệ thống cửa hàng và nền tảng online. Không ngừng tối ưu trải nghiệm khách hàng với hệ thống CRM/CDP hiện đại.
       </div>
     ),
   },

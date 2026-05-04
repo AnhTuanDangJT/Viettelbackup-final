@@ -238,7 +238,7 @@ export const VietnamMap = () => {
           style={{
             position: "absolute",
             left: "65px",
-            top: "1105px",
+            top: "1205px",
             width: "8.381px",
             height: "9.555px",
           }}
@@ -254,13 +254,29 @@ export const VietnamMap = () => {
           style={{
             position: "absolute",
             left: "385px",
-            top: "1075px",
+            top: "1195px",
             width: "8.381px",
             height: "9.555px",
           }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 9 10" fill="none">
             <path d="M5.99414 4.82715L3.15625 6.83203L3.12402 6.85449L3.1377 6.89062L4.11133 9.4873L1.70605 9.00684L0.0605469 6.53809L2.54688 3.05566L8.27051 0.113281L5.99414 4.82715Z" fill="#ED1C24" stroke="black" strokeWidth="0.1"/>
+          </svg>
+        </div>
+
+        {/* Island below Lam Dong */}
+        <div
+          className="pointer-events-auto"
+          style={{
+            position: "absolute",
+            left: "450px",
+            top: "1055px",
+            width: "3.017px",
+            height: "3.855px",
+          }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 4 4" fill="none">
+            <path d="M2.9502 3.78418L0.712891 3.14453L0.0605469 0.212891L2.13867 0.0527344L2.9502 3.78418Z" fill="#ED1C24" stroke="black" strokeWidth="0.1"/>
           </svg>
         </div>
       </div>

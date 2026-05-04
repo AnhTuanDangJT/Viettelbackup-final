@@ -214,6 +214,55 @@ export const VietnamMap = () => {
             </span>
           </div>
         </div>
+
+        {/* Phu Quoc Group */}
+        {/* Big island in the middle */}
+        <div
+          className="pointer-events-auto"
+          style={{
+            position: "absolute",
+            left: "140px",
+            top: "1055px",
+            width: "65.374px",
+            height: "52.299px",
+          }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 66 53" fill="none">
+            <path d="M65.2676 52.249H62.3018L63.8623 50.5312L65.2676 52.249ZM15.7168 2.87988L15.7568 2.84961L15.7168 2.88086L15.7236 2.88672L19.0605 5.88965L19.7285 16.25L15.7109 24.9551L15.708 24.9648L14.7021 29.1553L14.6943 29.1875L14.7217 29.207L16.5293 30.5215L13.918 35.0898L12.6201 32.1719L9.60352 17.7578L9.60156 17.749L9.59668 17.7422L6.58008 12.8809L6.57031 12.8652L6.55371 12.8604L1.71484 11.1914L0.0566406 6.5498L0.853516 5.75293L6.86133 7.08887L6.89453 7.09668L6.91406 7.06836L11.0947 0.879883L13.5596 0.0585938L15.7168 2.87988Z" fill="#ED1C24" stroke="black" strokeWidth="0.1"/>
+          </svg>
+        </div>
+
+        {/* Small island on the left */}
+        <div
+          className="pointer-events-auto"
+          style={{
+            position: "absolute",
+            left: "65px",
+            top: "1105px",
+            width: "8.381px",
+            height: "9.555px",
+          }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 9 10" fill="none">
+            <path d="M5.99414 4.82715L3.15625 6.83203L3.12402 6.85449L3.1377 6.89062L4.11133 9.4873L1.70605 9.00684L0.0605469 6.53809L2.54688 3.05566L8.27051 0.113281L5.99414 4.82715Z" fill="#ED1C24" stroke="black" strokeWidth="0.1"/>
+          </svg>
+        </div>
+
+        {/* Small island on the right */}
+        <div
+          className="pointer-events-auto"
+          style={{
+            position: "absolute",
+            left: "325px",
+            top: "1105px",
+            width: "8.381px",
+            height: "9.555px",
+          }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 9 10" fill="none">
+            <path d="M5.99414 4.82715L3.15625 6.83203L3.12402 6.85449L3.1377 6.89062L4.11133 9.4873L1.70605 9.00684L0.0605469 6.53809L2.54688 3.05566L8.27051 0.113281L5.99414 4.82715Z" fill="#ED1C24" stroke="black" strokeWidth="0.1"/>
+          </svg>
+        </div>
       </div>
 
       {/* Main Province Layer */}

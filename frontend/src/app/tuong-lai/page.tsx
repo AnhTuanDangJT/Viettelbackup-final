@@ -251,7 +251,7 @@ export default function TuongLaiPage() {
     <div className="min-h-screen flex flex-col font-sans bg-white">
       {/* 1. Main Future Vision Section */}
       <section 
-        className="relative h-screen flex items-center justify-end overflow-hidden"
+        className="relative h-auto lg:h-screen min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-end overflow-hidden py-16 lg:py-0"
         style={{ background: 'rgba(0, 0, 0, 0.85)' }}
       >
         <WavyBackground />
@@ -285,24 +285,49 @@ export default function TuongLaiPage() {
             </motion.div>
           </AnimatePresence>
         </div>
-        <div className="relative z-10 flex flex-col items-end text-right pr-24" style={{ transform: 'translateY(-150px)' }}>
-          <div style={{ marginRight: '300px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            @media (min-width: 1024px) {
+              .desktop-custom-hero {
+                transform: translateY(-150px) !important;
+                padding-right: 96px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-end !important;
+                text-align: right !important;
+                width: auto !important;
+              }
+              .desktop-custom-margin {
+                margin-right: 230px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-end !important;
+              }
+              .desktop-custom-title {
+                width: 626px !important;
+                white-space: nowrap !important;
+                font-size: 52px !important;
+              }
+              .desktop-custom-p {
+                width: 324px !important;
+                text-align: right !important;
+              }
+            }
+          `
+        }} />
+
+        <div className="relative z-10 flex flex-col items-center lg:items-end text-center lg:text-right px-6 mt-12 lg:mt-0 w-full desktop-custom-hero">
+          <div className="mr-0 flex flex-col items-center lg:items-flex-end max-w-full desktop-custom-margin">
             <motion.div 
-              style={{ width: '626px' }}
+              className="w-full max-w-[626px] desktop-custom-title"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 style={{ 
-                color: '#FFF', 
-                fontFamily: 'var(--font-beausans)',
-                fontSize: '52px', 
-                fontWeight: 700, 
-                lineHeight: 'normal',
-                textTransform: 'uppercase',
-                margin: 0,
-                whiteSpace: 'nowrap'
-              }}>
+              <h1 
+                className="text-white text-[28px] sm:text-[42px] lg:text-[52px] font-bold uppercase whitespace-normal lg:whitespace-nowrap m-0 tracking-tight"
+                style={{ fontFamily: 'var(--font-beausans)', lineHeight: 'normal' }}
+              >
                 VỮNG BƯỚC <motion.span 
                   style={{ color: '#E03' }}
                   animate={{ 
@@ -326,32 +351,23 @@ export default function TuongLaiPage() {
               </h1>
             </motion.div>
             
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginTop: '24px', marginRight: '0px' }}>
-              <p style={{
-                width: '324px',
-                color: '#F2F2F2',
-                textAlign: 'right',
-                fontFamily: 'Roboto',
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal'
-              }}>
+            <div className="flex items-center justify-center lg:justify-end gap-4 mt-6 lg:mr-0 max-w-[450px] lg:max-w-none">
+              <p className="w-full max-w-[324px] text-white/90 text-center lg:text-right font-roboto text-sm sm:text-base font-normal leading-normal desktop-custom-p">
                 Từ những nỗ lực mỗi ngày, Viettel Store đang từng bước kiến tạo một tương lai phát triển vững chắc và khác biệt
               </p>
-              <div style={{ width: '2px', height: '63px', background: '#E03' }}></div>
+              <div className="hidden lg:block w-[2px] h-[63px] bg-[#E03]"></div>
             </div>
           </div>
         </div>
 
         {/* 4 Items at the bottom */}
         <div 
-          className="absolute bottom-20 left-1/2 -translate-x-1/2 w-full max-w-[1200px] px-6 z-20 grid grid-cols-4 gap-4 select-none justify-items-center"
+          className="relative lg:absolute lg:bottom-20 lg:left-1/2 lg:-translate-x-1/2 w-full max-w-[1200px] px-6 z-20 flex flex-wrap lg:grid lg:grid-cols-4 gap-4 select-none justify-center lg:justify-items-center mt-12 lg:mt-0"
         >
           {heroFeatures.map((feature, idx) => (
             <div 
               key={idx}
-              className="flex flex-col items-center justify-center text-center cursor-pointer group"
+              className="flex flex-col items-center justify-center text-center cursor-pointer group w-full sm:w-auto min-w-[120px]"
             >
               <motion.div 
                 className="w-[55px] h-[55px] mb-3 flex items-center justify-center rounded-full select-none"
@@ -431,18 +447,14 @@ export default function TuongLaiPage() {
 
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 flex flex-col items-center">
           {/* Top visual part with text on left and 3 circle images on right */}
-          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-12 mb-16">
+          <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-12 mb-16">
             {/* LEFT TEXT CONTENT */}
-            <div className="flex-1 max-w-[640px] text-left">
-              <h2 style={{
+            <div className="flex-1 max-w-[640px] text-center lg:text-left">
+              <h2 className="text-[32px] sm:text-[42px] lg:text-[52px] font-bold uppercase mb-8 lg:mb-[40px] tracking-tight" style={{
                 color: '#F2F2F2',
                 fontFamily: 'var(--font-beausans)',
-                fontSize: '52px',
                 fontStyle: 'normal',
-                fontWeight: 700,
                 lineHeight: 'normal',
-                textTransform: 'uppercase',
-                marginBottom: '40px'
               }}>
                 MỤC TIÊU ĐẾN NĂM 2030
               </h2>
@@ -455,14 +467,14 @@ export default function TuongLaiPage() {
                 ].map((text, idx) => (
                   <motion.li 
                     key={idx} 
-                    className="flex items-center gap-4 select-none cursor-pointer group"
+                    className="flex items-center justify-start lg:justify-start gap-4 select-none cursor-pointer group"
                     whileHover={{ x: 10 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
-                    <div className="w-9 h-9 min-w-[36px] bg-white rounded-full flex items-center justify-center text-[#EE0033] shadow-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#EE0033] group-hover:text-white">
+                    <div className="w-9 h-9 min-w-[36px] bg-white rounded-full flex items-center justify-center text-[#EE0033] shadow-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#EE0033] group-hover:text-white shrink-0">
                       <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
                     </div>
-                    <span style={{
+                    <span className="text-left" style={{
                       color: '#FFF',
                       fontFamily: 'Roboto',
                       fontSize: '16px',
@@ -477,11 +489,42 @@ export default function TuongLaiPage() {
               </ul>
             </div>
 
+            <style dangerouslySetInnerHTML={{
+              __html: `
+                @media (max-width: 1023px) {
+                  .mobile-custom-circles {
+                    width: 100% !important;
+                    max-width: 320px !important;
+                    height: 240px !important;
+                    margin: 32px auto 0 auto !important;
+                  }
+                  .circle-left {
+                    width: 120px !important;
+                    height: 120px !important;
+                    top: 0px !important;
+                    left: 80px !important;
+                  }
+                  .circle-mid {
+                    width: 90px !important;
+                    height: 90px !important;
+                    top: 100px !important;
+                    left: 0px !important;
+                  }
+                  .circle-right {
+                    width: 140px !important;
+                    height: 140px !important;
+                    top: 100px !important;
+                    left: 160px !important;
+                  }
+                }
+              `
+            }} />
+
             {/* RIGHT CIRCLES CONTAINER */}
-            <div className="relative w-[520px] h-[360px] flex-shrink-0 select-none">
+            <div className="relative w-[520px] h-[360px] flex-shrink-0 select-none mx-auto mt-8 lg:mt-0 mobile-custom-circles">
               {/* Image Trái */}
               <div 
-                className="absolute z-30"
+                className="absolute z-30 circle-left"
                 style={{ 
                   width: '185px', height: '185px', borderRadius: '185px', 
                   boxShadow: '4px 1px 4px 0 rgba(0, 0, 0, 0.25)',
@@ -500,7 +543,7 @@ export default function TuongLaiPage() {
               </div>
               {/* Image Giữa */}
               <div 
-                className="absolute z-20"
+                className="absolute z-20 circle-mid"
                 style={{ 
                   width: '142px', height: '142px', borderRadius: '142px', 
                   boxShadow: '4px 1px 4px 0 rgba(0, 0, 0, 0.25)',
@@ -519,7 +562,7 @@ export default function TuongLaiPage() {
               </div>
               {/* Image Phải */}
               <div 
-                className="absolute z-10"
+                className="absolute z-10 circle-right"
                 style={{ 
                   width: '224px', height: '224px', borderRadius: '224px', 
                   boxShadow: '4px 1px 4px 0 rgba(0, 0, 0, 0.25)',
@@ -540,20 +583,16 @@ export default function TuongLaiPage() {
           </div>
 
           {/* Dividing White Line */}
-          <div style={{ width: '433px', height: '2px', background: '#FFF', margin: '48px auto 48px auto' }} />
+          <div className="w-full max-w-[433px] h-[2px] bg-white mx-auto my-12" />
 
           {/* LOWER PART: Tăng trưởng kinh doanh Header */}
-          <div className="text-center mb-12">
-            <h3 style={{
+          <div className="text-center mb-12 w-full">
+            <h3 className="text-[30px] sm:text-[36px] lg:text-[40px] font-bold uppercase mb-4 tracking-tight" style={{
               color: '#F2F2F2',
               textAlign: 'center',
               fontFamily: 'var(--font-beausans)',
-              fontSize: '40px',
               fontStyle: 'normal',
-              fontWeight: 700,
               lineHeight: 'normal',
-              textTransform: 'uppercase',
-              marginBottom: '12px'
             }}>
               TĂNG TRƯỞNG KINH DOANH
             </h3>
@@ -733,31 +772,18 @@ export default function TuongLaiPage() {
 
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 flex flex-col items-center text-center">
           {/* Header text with custom widths */}
-          <div className="flex flex-col items-center justify-center mb-16 select-none">
-            <h3 style={{
-              width: '731px',
-              maxWidth: '100%',
+          <div className="flex flex-col items-center justify-center mb-16 select-none w-full">
+            <h3 className="text-[30px] sm:text-[36px] lg:text-[40px] font-bold uppercase mb-4 tracking-tight w-full max-w-[731px]" style={{
               color: '#000',
               textAlign: 'center',
               fontFamily: 'var(--font-beausans)',
-              fontSize: '40px',
               fontStyle: 'normal',
-              fontWeight: 700,
               lineHeight: 'normal',
-              textTransform: 'uppercase',
-              marginBottom: '16px'
             }}>
               CÔNG NGHỆ & BÁN LẺ MỚI
             </h3>
-            <p style={{
-              width: '537px',
-              maxWidth: '100%',
-              color: '#000',
-              fontFamily: 'Roboto',
-              fontSize: '16px',
+            <p className="w-full max-w-[537px] text-center font-roboto text-sm sm:text-base text-black font-normal leading-normal" style={{
               fontStyle: 'normal',
-              fontWeight: 400,
-              lineHeight: 'normal'
             }}>
               Đẩy mạnh ứng dụng AI, Big Data và phát triển hệ sinh thái bán lẻ đa dịch vụ.
             </p>
@@ -925,31 +951,18 @@ export default function TuongLaiPage() {
 
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 flex flex-col items-center text-center">
           {/* Header text with custom widths */}
-          <div className="flex flex-col items-center justify-center mb-16 select-none">
-            <h3 style={{
-              width: '731px',
-              maxWidth: '100%',
+          <div className="flex flex-col items-center justify-center mb-16 select-none w-full">
+            <h3 className="text-[30px] sm:text-[36px] lg:text-[40px] font-bold uppercase mb-4 tracking-tight w-full max-w-[731px]" style={{
               color: '#FFF',
               textAlign: 'center',
               fontFamily: 'var(--font-beausans)',
-              fontSize: '40px',
               fontStyle: 'normal',
-              fontWeight: 700,
               lineHeight: 'normal',
-              textTransform: 'uppercase',
-              marginBottom: '16px'
             }}>
               TỔ CHỨC VỮNG MẠNH
             </h3>
-            <p style={{
-              width: '537px',
-              maxWidth: '100%',
-              color: '#F2F2F2',
-              fontFamily: 'Roboto',
-              fontSize: '16px',
+            <p className="w-full max-w-[537px] text-center font-roboto text-sm sm:text-base text-[#F2F2F2] font-normal leading-normal" style={{
               fontStyle: 'normal',
-              fontWeight: 400,
-              lineHeight: 'normal'
             }}>
               Xây dựng bộ máy tinh gọn, nhân sự chuyên nghiệp và Đảng bộ trong sạch.
             </p>
@@ -1094,9 +1107,8 @@ export default function TuongLaiPage() {
 
       {/* 3. QUOTE SECTION */}
       <section 
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden h-auto lg:h-[900px] min-h-[500px] flex flex-col items-center justify-center py-20 lg:py-0"
         style={{
-          height: '900px',
           backgroundImage: 'url(/images/tuong-lai/header-ve-chung-toi.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
@@ -1110,40 +1122,26 @@ export default function TuongLaiPage() {
 
         {/* Content Wrapper */}
         <motion.div 
-          className="relative z-[2] h-full flex flex-col items-center justify-center text-center text-white px-4"
+          className="relative z-[2] h-full flex flex-col items-center justify-center text-center text-white px-6 w-full max-w-[1200px] mx-auto"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <div style={{ 
+          <div className="text-[80px] lg:text-[128px] font-bold mb-[-20px] leading-normal" style={{ 
             fontFamily: 'Rockwell', 
-            fontSize: '128px', 
-            fontWeight: 700, 
-            marginBottom: '-20px',
-            lineHeight: 'normal'
           }}>
             “
           </div>
           
-          <h2 style={{
-            width: '1000px',
+          <h2 className="text-[24px] sm:text-[36px] lg:text-[52px] font-bold text-center uppercase mb-8 leading-tight tracking-tight w-full max-w-[1000px] mx-auto" style={{
             fontFamily: 'var(--font-beausans)',
-            fontSize: '52px',
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            marginBottom: '28px',
-            lineHeight: '1.2'
           }}>
             DẪN ĐẦU VỀ CÔNG NGHỆ - KHÁC BIỆT VỀ TRẢI NGHIỆM - BỨT PHÁ VỀ TĂNG TRƯỞNG
           </h2>
 
-          <p style={{
-            width: '600px',
+          <p className="text-sm sm:text-base lg:text-lg font-normal leading-normal w-full max-w-[600px] mx-auto" style={{
             fontFamily: 'Roboto',
-            fontSize: '18px',
-            fontWeight: 400,
-            lineHeight: 'normal'
           }}>
             Hành trình đến 2030 là hành trình tăng trưởng, đổi mới và khẳng định vị thế của Viettel Store.
           </p>

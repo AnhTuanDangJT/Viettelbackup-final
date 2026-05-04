@@ -16,9 +16,21 @@ const provinces = [
 
 
 
+import { useEffect } from "react";
+
 export const VietnamMap = () => {
   const [hoveredProvinceId, setHoveredProvinceId] = useState<string | null>(null);
   const [selectedProvinceId, setSelectedProvinceId] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const hoveredProvince = provinces.find(p => p.id === hoveredProvinceId);
   const selectedProvince = provinces.find(p => p.id === selectedProvinceId);
@@ -91,15 +103,14 @@ export const VietnamMap = () => {
       </div>
 
       {/* Hoang Sa (2217:169) and Truong Sa (2217:168) from Figma */}
-      {/* Hoang Sa (2217:169) and Truong Sa (2217:168) from Figma */}
       <div className="absolute z-[300] pointer-events-none">
         {/* Hoang Sa */}
         <div
           className="pointer-events-auto"
           style={{
             position: "absolute",
-            left: "900.55px",
-            top: "412.632px",
+            left: isMobile ? "600px" : "900.55px",
+            top: isMobile ? "450px" : "412.632px",
             width: "98.228px",
             height: "90.182px",
           }}
@@ -152,8 +163,8 @@ export const VietnamMap = () => {
           className="pointer-events-auto"
           style={{
             position: "absolute",
-            left: "900.968px",
-            top: "1000.954px",
+            left: isMobile ? "540px" : "900.968px",
+            top: isMobile ? "850px" : "1000.954px",
             width: "518.464px",
             height: "342.122px",
           }}

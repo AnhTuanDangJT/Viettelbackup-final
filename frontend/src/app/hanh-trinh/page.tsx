@@ -171,7 +171,6 @@ const HonorsStyles = () => (
       margin: 0 auto;
     }
 
-
     .achievement-carousel {
       position: relative;
       height: 600px;
@@ -191,6 +190,34 @@ const HonorsStyles = () => (
       transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
       cursor: pointer;
       user-select: none;
+    }
+
+    @media (max-width: 767px) {
+      .honor-card-main {
+        width: 320px !important;
+        height: 380px !important;
+        padding: 24px 20px !important;
+        border-radius: 20px !important;
+      }
+      .honor-card-side {
+        display: none !important;
+      }
+      .honor-card-title {
+        font-size: 20px !important;
+        margin-bottom: 16px !important;
+      }
+      .honor-divider {
+        width: 120px !important;
+        margin: 0 auto 16px !important;
+      }
+      .honor-desc {
+        font-size: 14px !important;
+      }
+      .honors-title {
+        font-size: 28px !important;
+        top: 20px !important;
+        left: 20px !important;
+      }
     }
   `}} />
 );
@@ -257,18 +284,15 @@ export default function HanhTrinhPage() {
         />
 
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
-          <div className="mx-auto" style={{ width: '1152px', paddingLeft: '30px' }}>
+          <div className="mx-auto w-full max-w-[1152px] pl-0 md:pl-[30px]">
             <h2 
-              className="uppercase relative z-10 mb-16"
+              className="uppercase relative z-10 mb-8 sm:mb-16 text-[32px] sm:text-[42px] lg:text-[48px]"
               style={{
                 color: '#44494D',
                 fontFamily: 'var(--font-beausans)',
-                fontSize: '48px',
                 fontStyle: 'normal',
                 fontWeight: 700,
                 lineHeight: 'normal',
-                width: '373px',
-                height: '72px'
               }}
             >
               THÀNH TỰU
@@ -278,35 +302,18 @@ export default function HanhTrinhPage() {
 
           {/* Vị thế thị trường grid */}
           <div 
-            className={`shadow-2xl relative mb-16 mx-auto transition-all duration-300 ${isMarketHovered ? "" : "grid"}`}
+            className={`shadow-2xl relative mb-16 mx-auto transition-all duration-300 w-full max-w-[1152px] h-auto lg:h-[269px] rounded-[20px] p-6 sm:p-8 lg:p-0 flex items-center justify-center ${isMarketHovered ? "bg-black/80 flex-col justify-center" : "bg-white flex flex-col-reverse lg:grid lg:grid-cols-[520px_1fr] lg:justify-stretch"}`}
             onMouseEnter={() => setIsMarketHovered(true)}
             onMouseLeave={() => setIsMarketHovered(false)}
-            style={{
-              width: '1152px',
-              height: '269px',
-              borderRadius: '20px',
-              backgroundColor: isMarketHovered ? 'rgba(0, 0, 0, 0.80)' : '#FFF',
-              gridTemplateColumns: isMarketHovered ? "none" : "520px 1fr",
-              alignItems: 'center',
-              display: isMarketHovered ? 'flex' : 'grid',
-              justifyContent: isMarketHovered ? 'center' : 'stretch'
-            }}
           >
             {isMarketHovered ? (
               <div 
+                className="w-fit max-w-full min-h-0 lg:min-h-[114px] text-white font-roboto text-sm sm:text-base flex flex-col justify-center gap-3 lg:gap-2 px-6 lg:px-12 mx-auto"
                 style={{
-                  width: '919px',
-                  height: '114px',
-                  color: '#FFF',
                   fontFamily: roboto.style.fontFamily,
-                  fontSize: '16px',
                   fontStyle: 'normal',
                   fontWeight: 400,
                   lineHeight: 'normal',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  gap: '4px'
                 }}
               >
                 {[
@@ -316,15 +323,15 @@ export default function HanhTrinhPage() {
                   "Nhà bán lẻ có tỷ trọng Online tốt nhất thị trường.",
                   "3 năm liên tục Top 3 nhà bán lẻ uy tín nhất tại Việt Nam (2023-2025)."
                 ].map((text, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <span className="w-1 h-1 rounded-full bg-white shrink-0" />
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white shrink-0 mt-1.5" />
                     <span>{text}</span>
                   </div>
                 ))}
               </div>
             ) : (
               <>
-                <div className="space-y-[6px]" style={{ paddingLeft: '90px' }}>
+                <div className="space-y-[6px] pl-0 lg:pl-[90px] w-full lg:w-auto">
                   {["Top 3 bán lẻ Việt Nam", "Top 2 Đông Nam Á", "Doanh thu TMĐT dẫn đầu", "Tỷ trọng online cao nhất", "Top 3 thương hiệu uy tín"].map((text, i) => (
                     <div key={i} className="flex items-center gap-3 group">
                       <div className="w-3 h-3 bg-viettel rounded-full group-hover:scale-150 transition-transform"></div>
@@ -344,17 +351,12 @@ export default function HanhTrinhPage() {
                   ))}
                 </div>
                 <div 
-                  style={{ 
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    paddingLeft: "180px"
-                  }}
+                  className="flex justify-start pl-0 lg:pl-[180px] mb-6 lg:mb-0 mt-0 lg:mt-0"
                 >
                   <h3 
-                    className="uppercase leading-none mb-4 font-beausans whitespace-nowrap"
+                    className="uppercase leading-none font-beausans whitespace-nowrap text-[28px] sm:text-[36px] lg:text-[40px]"
                     style={{ 
                       color: '#ED1C24', 
-                      fontSize: '40px', 
                       fontWeight: 700,
                       fontStyle: 'normal',
                       lineHeight: 'normal'
@@ -367,7 +369,7 @@ export default function HanhTrinhPage() {
             )}
           </div>
 
-            <div className="flex flex-wrap justify-center gap-8 mx-auto" style={{ width: '1152px' }}>
+            <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6 sm:gap-8 mx-auto w-full max-w-[1152px]">
               {[
                 { 
                   title: <>HỆ THỐNG <br /> & ĐỔI MỚI</>, 
@@ -405,24 +407,19 @@ export default function HanhTrinhPage() {
               ].map((card, idx) => (
                 <div 
                   key={idx} 
-                  className="shadow-xl border border-gray-100 transition-all p-8 flex flex-col items-center text-center"
+                  className="shadow-xl border border-gray-100 transition-all p-6 sm:p-8 flex flex-col items-center text-center w-full max-w-[340px] lg:w-[252.249px] h-auto lg:h-[347.454px] rounded-[20px] bg-white cursor-pointer"
                   onMouseEnter={() => setHoveredCardIndex(idx)}
                   onMouseLeave={() => setHoveredCardIndex(null)}
                   style={{
-                    width: '252.249px',
-                    height: '347.454px',
-                    borderRadius: '20px',
-                    backgroundColor: hoveredCardIndex === idx && card.hoverItems ? 'rgba(0, 0, 0, 0.80)' : '#FFF',
-                    cursor: card.hoverItems ? 'pointer' : 'default'
+                    backgroundColor: hoveredCardIndex === idx && card.hoverItems ? 'rgba(0, 0, 0, 0.80)' : undefined,
                   }}
                 >
                   {hoveredCardIndex === idx && card.hoverItems ? (
                     <div 
                       style={{
-                        width: idx === 1 ? '224px' : '239px',
                         color: '#FFF',
                         fontFamily: roboto.style.fontFamily,
-                        fontSize: '16px',
+                        fontSize: '15px',
                         fontStyle: 'normal',
                         fontWeight: 400,
                         lineHeight: 'normal',
@@ -436,8 +433,8 @@ export default function HanhTrinhPage() {
                       }}
                     >
                       {card.hoverItems.map((text, i) => (
-                        <div key={i} className="flex items-center gap-3">
-                          <span className="w-1 h-1 rounded-full bg-white shrink-0" />
+                        <div key={i} className="flex items-start gap-3">
+                          <span className="w-1 h-1 rounded-full bg-white shrink-0 mt-2" />
                           <span>{text}</span>
                         </div>
                       ))}
@@ -445,11 +442,10 @@ export default function HanhTrinhPage() {
                   ) : (
                     <>
                       <h4 
-                        className="mb-6 uppercase tracking-tight text-center"
+                        className="mb-4 sm:mb-6 uppercase tracking-tight text-center text-[24px] sm:text-[30px]"
                         style={{
                           color: '#ED1C24',
                           fontFamily: 'var(--font-beausans)',
-                          fontSize: '30px',
                           fontStyle: 'normal',
                           fontWeight: 700,
                           lineHeight: 'normal'
@@ -459,13 +455,13 @@ export default function HanhTrinhPage() {
                       </h4>
                       <ul className="space-y-0 text-left w-full">
                         {card.items.map((item, i) => (
-                          <li key={i} className={`flex items-center gap-3 ${idx === 1 && i === 0 ? "mt-8" : ""}`}>
+                          <li key={i} className={`flex items-center gap-3 ${idx === 1 && i === 0 ? "mt-4 lg:mt-8" : ""}`}>
                             <span className="w-1.5 h-1.5 bg-viettel rounded-full shrink-0"></span>
                             <span 
                               style={{
                                 color: '#000',
                                 fontFamily: 'var(--font-beausans)',
-                                fontSize: '16px',
+                                fontSize: '15px sm:16px',
                                 fontStyle: 'normal',
                                 fontWeight: 400,
                                 lineHeight: 'normal'

@@ -34,8 +34,6 @@ const valueItems = [
     content: (
       <div
         style={{
-          width: '169px',
-          height: '58px',
           fontFamily: 'Roboto',
           fontSize: '16px',
           fontWeight: 400,
@@ -44,6 +42,7 @@ const valueItems = [
           fontStyle: 'normal',
           lineHeight: 'normal'
         }}
+        className="w-full max-w-[240px] sm:max-w-none min-h-0 lg:w-[169px] lg:h-[58px]"
       >
         Trở thành nhà bán lẻ đa sản phẩm, dịch vụ hàng đầu tại Việt Nam
       </div>
@@ -56,8 +55,6 @@ const valueItems = [
     content: (
       <div
         style={{
-          width: '177px',
-          height: '156px',
           fontFamily: 'Roboto',
           fontSize: '16px',
           fontWeight: 400,
@@ -66,7 +63,7 @@ const valueItems = [
           lineHeight: 'normal',
           fontStyle: 'normal'
         }}
-        className="space-y-4"
+        className="space-y-4 w-full max-w-[240px] sm:max-w-none min-h-0 lg:w-[177px] lg:h-[156px]"
       >
         <div>
           <p className="font-bold">Với khách hàng</p>
@@ -90,8 +87,6 @@ const valueItems = [
     content: (
       <div
         style={{
-          width: '240px',
-          height: 'auto',
           fontFamily: 'Roboto',
           fontSize: '16px',
           fontWeight: 400,
@@ -100,6 +95,7 @@ const valueItems = [
           fontStyle: 'normal',
           lineHeight: 'normal'
         }}
+        className="w-full max-w-[240px] sm:max-w-none min-h-0 lg:w-[240px]"
       >
         Phủ sóng toàn quốc with hệ thống siêu thị hiện đại, cung cấp đa dạng sản phẩm: smartphone, laptop, thiết bị thông minh và dịch vụ viễn thông – tài chính – số. Đáp ứng toàn diện nhu cầu công nghệ với chất lượng cao và giá cạnh tranh.
       </div>
@@ -112,8 +108,6 @@ const valueItems = [
     content: (
       <div
         style={{
-          width: '190px',
-          height: '159px',
           fontFamily: 'Roboto',
           fontSize: '16px',
           fontWeight: 400,
@@ -122,6 +116,7 @@ const valueItems = [
           fontStyle: 'normal',
           lineHeight: 'normal'
         }}
+        className="w-full max-w-[240px] sm:max-w-none min-h-0 lg:w-[190px] lg:h-[159px]"
       >
         Chuyển dịch mạnh mẽ sang mô hình bán hàng đa kênh (Omnichannel), kết hợp hệ thống cửa hàng và nền tảng online. Không ngừng tối ưu trải nghiệm khách hàng với hệ thống CRM hiện đại.
       </div>
@@ -133,12 +128,21 @@ export function AboutUsRedSection() {
   return (
     <section
       data-node-id="2246:1112"
-      className="relative w-full bg-[#EE0033] text-white overflow-hidden"
-      style={{ minHeight: '1650px' }}
+      className="about-red-section relative w-full bg-[#EE0033] text-white overflow-hidden pb-32 lg:pb-0"
     >
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @media (min-width: 1024px) {
+            .about-red-section {
+              min-height: 1650px !important;
+            }
+          }
+        `
+      }} />
+
       {/* Subtle terrain background pattern - Left */}
       <div 
-        className="absolute z-[1] pointer-events-none" 
+        className="absolute z-[1] pointer-events-none block" 
         style={{ 
           width: '1364px',
           height: '575px',
@@ -146,14 +150,14 @@ export function AboutUsRedSection() {
           background: 'url(/images/about/diahinh3.png) -0.615px -279.851px / 100.108% 158.424% no-repeat',
           opacity: 1,
           mixBlendMode: 'multiply',
-          top: '1150px',
+          bottom: '0px',
           left: '-106px',
           transform: 'scaleY(-1)'
         }} 
       />
       {/* Subtle terrain background pattern - Right (Mirrored) */}
       <div 
-        className="absolute z-[1] pointer-events-none" 
+        className="absolute z-[1] pointer-events-none block" 
         style={{ 
           width: '1364px',
           height: '575px',
@@ -161,22 +165,18 @@ export function AboutUsRedSection() {
           background: 'url(/images/about/diahinh3.png) -0.615px -279.851px / 100.108% 158.424% no-repeat',
           opacity: 1,
           mixBlendMode: 'multiply',
-          top: '1150px',
+          bottom: '0px',
           left: '1258px', // -106px + 1364px
           transform: 'scaleY(-1) scaleX(-1)'
         }} 
       />
-      <div className="relative z-[12] mx-auto max-w-[1440px] min-h-full">
+      <div className="relative z-[12] mx-auto max-w-[1440px] px-6 lg:px-0 py-12 lg:py-0 flex flex-col lg:block">
         {/* Header: VỀ CHÚNG TÔI */}
         <h2
-          className="absolute font-beausans font-bold uppercase z-[10]"
+          className="relative lg:absolute font-beausans font-bold uppercase z-[10] text-[36px] sm:text-[42px] lg:text-[52px] lg:top-[31px] lg:left-[146px] lg:w-[760px]"
           style={{
-            top: '31px',
-            left: '146px',
-            width: '760px',
             color: '#F2F2F2',
             textAlign: 'left',
-            fontSize: '52px',
             fontWeight: 700,
             lineHeight: 'normal',
           }}
@@ -186,14 +186,9 @@ export function AboutUsRedSection() {
 
         {/* Paragraph: under the header */}
         <p
-          className="absolute font-roboto z-[10]"
+          className="relative lg:absolute font-roboto z-[10] text-base mt-4 lg:mt-0 lg:top-[160px] lg:left-[146px] lg:w-[368px] lg:h-[120px]"
           style={{
-            top: '160px',
-            left: '146px',
-            width: '368px',
-            height: '120px',
             color: '#F2F2F2',
-            fontSize: '16px',
             fontWeight: 400,
             lineHeight: 'normal',
           }}
@@ -201,25 +196,47 @@ export function AboutUsRedSection() {
           Viettel Store được thành lập ngày 03/05/2006 với siêu thị điện thoại đầu tiên tại Hà Nội, là đơn vị nòng cốt thuộc Viettel Commerce.Từ con số 0, Viettel Store đã phát triển trở thành chuỗi bán lẻ thiết bị viễn thông và công nghệ hàng đầu Việt Nam, giữ vững vị thế Top 3 thị trường.
         </p>
 
+        {/* Collage Grid for mobile/tablet */}
+        <div className="grid lg:hidden grid-cols-4 sm:grid-cols-6 gap-2 mt-8 z-[2]">
+          {aboutTiles.filter(t => !t.isSpacer).map((tile) => (
+            <div key={tile.id} className="relative aspect-square overflow-hidden rounded-md">
+              {tile.isRed ? (
+                <div 
+                  className="w-full h-full" 
+                  style={{ 
+                    background: tile.id === 'r1c1' 
+                      ? 'linear-gradient(to right, transparent, #CE0730)' 
+                      : (tile.redType === 'dark' ? '#CE0730' : '#EE0033') 
+                  }}
+                />
+              ) : (
+                <Image 
+                  src={tile.image || ""} 
+                  alt={tile.alt || ""} 
+                  fill 
+                  priority
+                  className="object-cover"
+                />
+              )}
+            </div>
+          ))}
+        </div>
 
-        {/* Bottom Values Section: aligned with icons at top 700px */}
+        {/* Bottom Values Section: aligned with icons at top 700px on desktop */}
         <div
-          className="absolute w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 md:gap-32 text-white items-start"
-          style={{ top: '700px', paddingLeft: '140px', paddingRight: '140px' }}
+          className="relative lg:absolute w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-16 lg:gap-32 text-white items-start mt-12 lg:mt-0 lg:top-[700px] lg:left-0 lg:px-[140px]"
         >
           {valueItems.map((item, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <div className="mb-12 opacity-90 transition-transform duration-300 hover:scale-110">
+              <div className="mb-6 lg:mb-12 opacity-90 transition-transform duration-300 hover:scale-110">
                 {item.icon}
               </div>
               <h3
-                className="font-beausans font-bold leading-tight uppercase tracking-tight flex items-center justify-center"
+                className="font-beausans font-bold leading-tight uppercase tracking-tight flex items-center justify-center mb-4 lg:mb-[80px] text-[22px] sm:text-[24px] lg:text-[28px]"
                 style={{
-                  marginBottom: '80px',
                   color: '#F2F2F2',
                   textAlign: 'center',
                   fontWeight: 700,
-                  fontSize: '28px',
                   ...item.titleStyle
                 }}
               >
@@ -233,9 +250,9 @@ export function AboutUsRedSection() {
         </div>
       </div>
 
-      {/* Collage Grid to the right of the paragraph - moved to right edge of page */}
+      {/* Collage Grid to the right of the paragraph on desktop */}
       <div 
-        className="absolute grid z-[2]"
+        className="hidden lg:grid absolute z-[2]"
         style={{
           top: '0',
           right: '0',

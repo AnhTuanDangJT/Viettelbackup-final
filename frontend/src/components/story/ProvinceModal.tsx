@@ -15,14 +15,21 @@ interface ProvinceModalProps {
 export const ProvinceModal: React.FC<ProvinceModalProps> = ({ 
   isOpen, 
   onClose, 
-  provinceName,
-  stories
+  provinceName, 
+  stories 
 }) => {
   const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     setMounted(true);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const scrollRef = React.useRef<HTMLDivElement>(null);
@@ -85,7 +92,21 @@ export const ProvinceModal: React.FC<ProvinceModalProps> = ({
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
             className="relative"
-            style={{
+            style={isMobile ? {
+              width: "100%",
+              maxWidth: "400px",
+              height: "auto",
+              maxHeight: "85vh",
+              flexShrink: 0,
+              borderRadius: "24px",
+              background: "#FFF",
+              boxShadow: "0 0 8.3px 0 rgba(0, 0, 0, 0.52)",
+              zIndex: 10000,
+              display: "flex",
+              flexDirection: "column",
+              padding: "24px 20px",
+              overflowY: "auto",
+            } : {
               width: "900px",
               height: "650px",
               flexShrink: 0,
@@ -102,10 +123,10 @@ export const ProvinceModal: React.FC<ProvinceModalProps> = ({
             {/* Close Button */}
             <button 
               onClick={onClose}
-              className="absolute top-8 right-10 text-gray-400 hover:text-[#ED1C24] transition-colors"
+              className={`absolute text-gray-400 hover:text-[#ED1C24] transition-colors ${isMobile ? 'top-4 right-4' : 'top-8 right-10'}`}
               aria-label="Close"
             >
-              <X size={32} />
+              <X size={isMobile ? 24 : 32} />
             </button>
 
             {/* Navigation Buttons (Floating on sides if multiple stories) */}
@@ -113,26 +134,38 @@ export const ProvinceModal: React.FC<ProvinceModalProps> = ({
               <>
                 <button
                   onClick={handlePrev}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md text-[#ED1C24] hover:bg-gray-50 transition-colors z-[10001]"
+                  className={`absolute top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-white shadow-md text-[#ED1C24] hover:bg-gray-50 transition-colors z-[10001] ${isMobile ? 'left-2 w-8 h-8' : 'left-4 w-12 h-12'}`}
                 >
-                  <ChevronLeft size={32} />
+                  <ChevronLeft size={isMobile ? 20 : 32} />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-md text-[#ED1C24] hover:bg-gray-50 transition-colors z-[10001]"
+                  className={`absolute top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-white shadow-md text-[#ED1C24] hover:bg-gray-50 transition-colors z-[10001] ${isMobile ? 'right-2 w-8 h-8' : 'right-4 w-12 h-12'}`}
                 >
-                  <ChevronRight size={32} />
+                  <ChevronRight size={isMobile ? 20 : 32} />
                 </button>
               </>
             )}
 
-            {/* Content Section: Row with Text and Image */}
-            <div className="flex flex-row justify-between items-start h-full">
+            {/* Content Section: Row on PC, Column on Mobile */}
+            <div className={`flex items-start h-full ${isMobile ? 'flex-col gap-4' : 'flex-row justify-between pr-0'}`}>
               {/* Left Column: Text */}
-              <div className="flex flex-col flex-1 pr-8">
+              <div className={`flex flex-col flex-1 ${isMobile ? 'pr-0 w-full' : 'pr-8'}`}>
                 {/* Province Name */}
                 <h2 
-                  style={{
+                  style={isMobile ? {
+                    width: "100%",
+                    color: "#ED1C24",
+                    fontFamily: 'var(--font-beausans), sans-serif',
+                    fontSize: "24px",
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    lineHeight: "normal",
+                    textTransform: "uppercase",
+                    margin: 0,
+                    display: "flex",
+                    alignItems: "center"
+                  } : {
                     width: "350px",
                     height: "44px",
                     color: "#ED1C24",
@@ -174,8 +207,8 @@ export const ProvinceModal: React.FC<ProvinceModalProps> = ({
                 {/* Paragraph */}
                 <div 
                   ref={scrollRef}
-                  className="custom-scrollbar overflow-y-auto pr-4 mt-6"
-                  style={{ height: "380px" }}
+                  className="custom-scrollbar overflow-y-auto pr-4 mt-4"
+                  style={isMobile ? { maxHeight: "200px" } : { height: "380px" }}
                 >
                   <p
                     style={{
@@ -210,14 +243,31 @@ export const ProvinceModal: React.FC<ProvinceModalProps> = ({
               {/* Right Column: Picture */}
               <div
                 key={currentIndex} // Force re-animation if needed or just update background
-                style={{
+                style={isMobile ? {
+                  width: "100%",
+                  height: "220px",
+                  borderRadius: "16px",
+                  overflow: "hidden",
+                  flexShrink: 0,
+                  marginTop: "8px",
+                } : {
                   width: "320px",
                   height: "500px",
                   borderRadius: "22px",
-                  background: `url(${currentStory?.image || '/images/story-map/province-preview.png'}) lightgray 50% / cover no-repeat`,
+                  overflow: "hidden",
                   flexShrink: 0
                 }}
-              />
+              >
+                <img 
+                  src={currentStory?.image || '/images/story-map/province-preview.png'}
+                  alt={currentStory?.subheader || provinceName || "Province Image"}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover"
+                  }}
+                />
+              </div>
             </div>
           </motion.div>
         </div>

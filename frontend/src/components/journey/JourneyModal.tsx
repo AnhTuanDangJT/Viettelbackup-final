@@ -30,8 +30,7 @@ export const JourneyModal: React.FC<JourneyModalProps> = ({ isOpen, onClose, mil
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="relative bg-[#333] w-full max-w-[1200px] overflow-hidden rounded-lg shadow-2xl flex flex-col md:flex-row"
-            style={{ minHeight: "600px" }}
+            className="relative bg-[#333] w-full max-w-[1200px] rounded-lg shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-none overflow-y-auto md:min-h-[600px]"
           >
             {/* Close Button */}
             <button
@@ -46,7 +45,7 @@ export const JourneyModal: React.FC<JourneyModalProps> = ({ isOpen, onClose, mil
             </button>
 
             {/* Left Side - Image */}
-            <div className="w-full md:w-1/2 relative min-h-[400px]">
+            <div className="w-full md:w-1/2 relative min-h-[260px] sm:min-h-[320px] md:min-h-[400px]">
               <Image
                 src={milestone.modalImage || milestone.image}
                 alt={milestone.title}
@@ -56,8 +55,8 @@ export const JourneyModal: React.FC<JourneyModalProps> = ({ isOpen, onClose, mil
             </div>
 
             {/* Right Side - Content */}
-            <div className="w-full md:w-1/2 p-12 flex flex-col justify-center">
-              <div className="space-y-12 overflow-y-auto max-h-[70vh] pr-4 custom-scrollbar">
+            <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center">
+              <div className="space-y-6 md:space-y-12 overflow-y-auto max-h-[70vh] pr-4 custom-scrollbar">
                 {milestone.events?.map((event, index) => (
                   <div key={index} className="flex flex-col gap-4">
                     <h3

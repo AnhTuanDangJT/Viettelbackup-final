@@ -20,6 +20,37 @@ export const JourneyGrid: React.FC = () => {
   const [selectedMilestone, setSelectedMilestone] = useState<Milestone | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  React.useEffect(() => {
+    const handleScroll = (e: Event) => {
+      if (isModalOpen) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+    const preventKeyScroll = (e: KeyboardEvent) => {
+      const keys = [" ", "ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End"];
+      if (keys.includes(e.key)) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("wheel", handleScroll, { passive: false });
+      window.addEventListener("touchmove", handleScroll, { passive: false });
+      window.addEventListener("keydown", preventKeyScroll, { passive: false });
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchmove", handleScroll);
+      window.removeEventListener("keydown", preventKeyScroll);
+    };
+  }, [isModalOpen]);
+
   const paginate = (newDirection: number) => {
     const nextPage = (page + newDirection + totalPages) % totalPages;
     setPage([nextPage, newDirection]);
@@ -57,7 +88,7 @@ export const JourneyGrid: React.FC = () => {
 
   return (
     <div className="w-full relative pt-6 flex flex-col items-center overflow-hidden">
-      <div className="w-full flex justify-center min-h-[660px]">
+      <div className="w-full flex justify-center min-h-[300px] md:min-h-[660px]">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={page}
@@ -71,8 +102,7 @@ export const JourneyGrid: React.FC = () => {
               opacity: { duration: 0.3 },
               scale: { duration: 0.3 }
             }}
-            className="grid grid-cols-3 grid-rows-2 justify-items-center items-center"
-            style={{ columnGap: '158px', rowGap: '48px', width: 'max-content' }}
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-2 justify-items-center items-center gap-6 sm:gap-10 md:gap-x-[158px] md:gap-y-[48px] w-full max-w-[280px] sm:max-w-none md:w-max"
           >
             {currentItems.map((milestone) => (
               <MilestoneCircle
@@ -88,6 +118,18 @@ export const JourneyGrid: React.FC = () => {
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {isModalOpen && (
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            @media (max-width: 1023px) {
+              header.fixed {
+                display: none !important;
+              }
+            }
+          `
+        }} />
+      )}
 
       <JourneyModal 
         isOpen={isModalOpen} 

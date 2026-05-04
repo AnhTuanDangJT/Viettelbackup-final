@@ -5,11 +5,7 @@ import { JourneyGrid } from "./JourneyGrid";
 export const JourneySection = () => {
   return (
     <section 
-      className="relative bg-[#F2F2F2]"
-      style={{ 
-        paddingTop: "100px",
-        paddingBottom: "160px",
-      }}
+      className="relative bg-[#F2F2F2] pt-12 pb-16 md:pt-[100px] md:pb-[160px]"
     >
 
 

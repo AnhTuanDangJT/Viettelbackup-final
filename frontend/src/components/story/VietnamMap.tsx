@@ -221,8 +221,8 @@ export const VietnamMap = () => {
           className="pointer-events-auto"
           style={{
             position: "absolute",
-            left: "385px",
-            top: "1070px",
+            left: "140px",
+            top: "1055px",
             width: "65.374px",
             height: "52.299px",
           }}
@@ -237,8 +237,8 @@ export const VietnamMap = () => {
           className="pointer-events-auto"
           style={{
             position: "absolute",
-            left: "65px",
-            top: "1105px",
+            left: "345px",
+            top: "1075px",
             width: "8.381px",
             height: "9.555px",
           }}

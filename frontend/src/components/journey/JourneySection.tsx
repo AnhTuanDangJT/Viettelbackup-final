@@ -15,7 +15,7 @@ export const JourneySection = () => {
             HÀNH TRÌNH TỰ HÀO
           </h2>
           <p style={{
-            color: '#B5B4B4',
+            color: 'var(--xm-trung, #B5B4B4)',
             textAlign: 'center',
             fontFamily: 'var(--font-beausans)',
             fontSize: '26px',
@@ -24,7 +24,7 @@ export const JourneySection = () => {
             lineHeight: 'normal',
             marginTop: '8px',
           }}>
-            15 cột mốc lịch sử
+            Mỗi cột mốc là một bước tiến trong hành trình phát triển bền vững
           </p>
         </div>
 

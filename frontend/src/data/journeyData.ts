@@ -289,17 +289,13 @@ export const journeyData: Milestone[] = [
   {
     id: 19,
     year: "2025",
-    title: "Vươn tầm quốc tế",
-    description: "Mở rộng tầm ảnh hưởng và chuẩn hóa quy trình theo tiêu chuẩn quốc tế.",
+    title: "Thiết lập kỷ lục doanh thu",
+    description: "Lần đầu vượt mốc 11.560 tỷ đồng, đồng thời mở rộng lĩnh vực kinh doanh mới.",
     image: "/images/journey/milestones/2025.jpg",
     events: [
       {
-        date: "05/2025",
-        content: "Lần đầu tiên hệ thống đạt doanh thu tháng vượt mốc 1.000 tỷ đồng. Khẳng định tốc độ tăng trưởng mạnh mẽ của toàn hệ thống."
-      },
-      {
-        date: "10/2025",
-        content: "Lần đầu tiên cán mốc doanh thu 10.000 tỷ đồng. Thiết lập kỷ lục doanh thu trong lịch sử phát triển."
+        date: "12/2025",
+        content: "Lần đầu tiên vượt mốc doanh thu 11.560 tỷ đồng. Thiết lập kỷ lục doanh thu trong lịch sử phát triển."
       },
       {
         date: "2025",

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 import { StoryCard } from "./map-data/provincesContent";
 
 interface ProvinceModalProps {
@@ -250,22 +251,21 @@ export const ProvinceModal: React.FC<ProvinceModalProps> = ({
                   overflow: "hidden",
                   flexShrink: 0,
                   marginTop: "8px",
+                  position: "relative"
                 } : {
                   width: "320px",
                   height: "500px",
                   borderRadius: "22px",
                   overflow: "hidden",
-                  flexShrink: 0
+                  flexShrink: 0,
+                  position: "relative"
                 }}
               >
-                <img 
+                <Image 
                   src={currentStory?.image || '/images/story-map/province-preview.png'}
                   alt={currentStory?.subheader || provinceName || "Province Image"}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover"
-                  }}
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>

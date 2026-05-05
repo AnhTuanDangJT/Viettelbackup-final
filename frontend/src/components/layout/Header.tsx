@@ -21,14 +21,14 @@ export const Header = () => {
 
   return (
     <header className="fixed top-6 left-0 w-full z-50 flex justify-center px-6 pointer-events-none">
-      <div className="bg-white/95 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-none w-full max-w-7xl px-8 md:px-12 h-20 flex items-center justify-between pointer-events-auto border border-white/20 relative">
+      <div className="bg-white/95 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-none w-full max-w-6xl pl-2 pr-8 md:pl-2 md:pr-12 h-20 flex items-center justify-between pointer-events-auto border border-white/20 relative">
         <div className="flex items-center flex-shrink-0 h-full">
           <Link href="/" className="block relative w-32 sm:w-48 h-full md:w-64 overflow-hidden">
             <Image 
               src="/images/logo-viettel-store.png" 
               alt="Viettel Store" 
               fill 
-              className="object-contain object-left scale-[2.4] sm:scale-[3.8] origin-left translate-x-3 sm:translate-x-12 translate-y-2 lg:translate-x-12"
+              className="object-contain object-left scale-[2.4] sm:scale-[3.8] origin-left translate-x-0 translate-y-2"
               priority
             />
           </Link>

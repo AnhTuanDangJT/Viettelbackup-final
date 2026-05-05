@@ -101,7 +101,7 @@ const leaders = [
   { name: "THIẾU TÁ\nĐINH SƠN TÙNG", role: "Phó giám đốc Viettel Store", img: "/images/dinh-son-tung.jpg", objectPosition: "60% 0%", scale: 1.2 },
 ];
 
-const longService = [
+const longService: Honoree[] = [
   { name: "ĐỒNG CHÍ NGÔ NGÂN HÀ", years: 20, dept: "Phòng Kinh doanh Thiết bị", date: "01/10/2005", img: "/images/vinhdanh/v1.jpg" },
   { name: "ĐỒNG CHÍ NGUYỄN THỊ THÙY DƯƠNG", years: 20, dept: "Phòng Chất lượng dịch vụ", date: "01/10/2005", img: "/images/vinhdanh/v2.jpg" },
   { name: "ĐỒNG CHÍ ĐOÀN CHÍ HIẾU", years: 20, dept: "Phòng Kế hoạch và kiểm soát", date: "01/10/2005", img: "/images/vinhdanh/v3.jpg" },

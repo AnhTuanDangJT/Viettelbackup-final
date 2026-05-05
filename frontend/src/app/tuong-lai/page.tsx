@@ -5,17 +5,6 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { 
-  TrendingUp, 
-  Cpu, 
-  Users, 
-  Target, 
-  Globe, 
-  Zap, 
-  Box, 
-  Star, 
-  UserPlus, 
-  ShieldCheck, 
-  Flag,
   ArrowRight
 } from "lucide-react";
 
@@ -40,127 +29,9 @@ const WavyBackground = () => (
   </div>
 );
 
-const strategicPillars = [
-  {
-    id: "01",
-    title: "TĂNG TRƯỞNG KINH DOANH",
-    content: "Mở rộng quy mô, gia tăng doanh thu và giữ vững hiệu quả lợi nhuận.",
-    color: "#EE0033",
-    icon: <TrendingUp size={32} />
-  },
-  {
-    id: "02",
-    title: "CÔNG NGHỆ & BÁN LẺ MỚI",
-    content: "Dẫn đầu ứng dụng AI, Big Data và phát triển hệ sinh thái đa dịch vụ.",
-    color: "#EE0033",
-    icon: <Cpu size={32} />
-  },
-  {
-    id: "03",
-    title: "TỔ CHỨC VỮNG MẠNH",
-    content: "Xây dựng bộ máy tinh gọn, nhân sự chuyên nghiệp và Đảng bộ trong sạch.",
-    color: "#EE0033",
-    icon: <Users size={32} />
-  }
-];
 
-const focusGoals = [
-  {
-    id: "01",
-    title: "MỤC TIÊU TỔNG THỂ",
-    icon: <Target className="text-[#EE0033]" size={24} />,
-    items: [
-      "Top 3 chuỗi bán lẻ lớn nhất Việt Nam",
-      "Số 1 về ứng dụng công nghệ",
-      "Phát triển thêm ít nhất 01 chuỗi bán lẻ mới độc lập"
-    ]
-  },
-  {
-    id: "02",
-    title: "TĂNG TRƯỞNG KINH DOANH",
-    icon: <TrendingUp className="text-[#EE0033]" size={24} />,
-    items: [
-      "Doanh thu đạt 13.000 tỷ vào năm 2030",
-      "Lợi nhuận trước thuế đạt 200 tỷ",
-      "Thị phần bán lẻ điện thoại 13-15%",
-      "Tỷ suất lợi nhuận/doanh thu đạt 1,5%"
-    ]
-  },
-  {
-    id: "03",
-    title: "THỊ TRƯỜNG & KÊNH BÁN",
-    icon: <Globe className="text-[#EE0033]" size={24} />,
-    items: [
-      "Mở rộng 20-30 siêu thị tại khu vực tiềm năng",
-      "Kênh online chiếm 40-45% doanh thu",
-      "Phát triển đa kênh: offline - online - KHDN - affiliate - tự động hóa",
-      "Mở rộng thị trường quốc tế"
-    ]
-  },
-  {
-    id: "04",
-    title: "CHUYỂN ĐỔI SỐ & CÔNG NGHỆ",
-    icon: <Zap className="text-[#EE0033]" size={24} />,
-    items: [
-      "Dẫn đầu ứng dụng AI, Big Data trong bán lẻ",
-      "Số hóa toàn bộ hoạt động quản trị, bán hàng, chăm sóc khách hàng",
-      "Tự động hóa vận hành, thanh toán, quản trị",
-      "Tăng năng suất và giảm phụ thuộc nhân lực thủ công"
-    ]
-  },
-  {
-    id: "05",
-    title: "SẢN PHẨM & LĨNH VỰC MỚI",
-    icon: <Box className="text-[#EE0033]" size={24} />,
-    items: [
-      "Xây dựng hệ sinh thái đa sản phẩm - đa dịch vụ (công nghệ, tài chính, giáo dục, sức khỏe...)",
-      "Phát triển Smart Home, IoT, thiết bị sức khỏe, làm đẹp, sản phẩm cho trẻ em",
-      "Triển khai lĩnh vực mới: Grocery, năng lượng, sản phẩm organic..."
-    ]
-  },
-  {
-    id: "06",
-    title: "TRẢI NGHIỆM KHÁCH HÀNG",
-    icon: <Star className="text-[#EE0033]" size={24} />,
-    items: [
-      "Nâng cao trải nghiệm theo hướng cá nhân hóa - cao cấp (luxury)",
-      "Xây dựng hệ thống CRM và chăm sóc khách hàng toàn diện",
-      "Chuẩn hóa đội ngũ bán hàng, nâng cao chất lượng phục vụ"
-    ]
-  },
-  {
-    id: "07",
-    title: "TỔ CHỨC & NHÂN SỰ",
-    icon: <UserPlus className="text-[#EE0033]" size={24} />,
-    items: [
-      "Xây dựng bộ máy tinh gọn - hiệu quả - công nghệ hóa",
-      "Quy mô khoảng 3.200 nhân sự vào 2030",
-      "Thu nhập bình quân đạt 20 triệu/người/tháng",
-      "Phát triển đội ngũ chuyên nghiệp, kỷ luật, gắn bó và làm chủ công nghệ"
-    ]
-  },
-  {
-    id: "08",
-    title: "ĐƠN VỊ VỮNG MẠNH",
-    icon: <ShieldCheck className="text-[#EE0033]" size={24} />,
-    items: [
-      "Bảo đảm ổn định chính trị nội bộ, đoàn kết, kỷ luật cao",
-      "Không để xảy ra tham nhũng, lãng phí, vi phạm nghiêm trọng",
-      "Thực hiện tốt chính sách, chăm lo đời sống vật chất và tinh thần người lao động"
-    ]
-  },
-  {
-    id: "09",
-    title: "XÂY DỰNG ĐẢNG",
-    icon: <Flag className="text-[#EE0033]" size={24} />,
-    items: [
-      "Xây dựng Đảng bộ trong sạch, vững mạnh toàn diện",
-      "100% cán bộ, đảng viên có bản lĩnh chính trị vững vàng, hoàn thành nhiệm vụ",
-      "Nâng cao chất lượng công tác cán bộ, kiểm tra, giám sát, sinh hoạt chi bộ",
-      "Phòng chống 'tự diễn biến', 'tự chuyển hóa', bảo vệ chính trị nội bộ"
-    ]
-  }
-];
+
+
 
 const heroSlides = [
   "/images/tuong-lai/slideshow/s1.png",
@@ -231,7 +102,6 @@ const heroFeatures = [
 ];
 
 export default function TuongLaiPage() {
-  const [expandedIds, setExpandedIds] = React.useState<string[]>([]);
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   React.useEffect(() => {
@@ -241,11 +111,7 @@ export default function TuongLaiPage() {
     return () => clearInterval(timer);
   }, []);
 
-  const toggleGoal = (id: string) => {
-    setExpandedIds(prev => 
-      prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
-    );
-  };
+
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-white">
@@ -637,8 +503,8 @@ export default function TuongLaiPage() {
                 lineHeight: '1.2'
               }}>VỊ THẾ DẪN ĐẦU</h4>
               <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#EE0033] mt-1 shrink-0">•</span>
+                <li className="flex items-start gap-2 text-left">
+                  <span className="text-[#EE0033] shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                   <span style={{ color: '#111', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                     Vững vàng <strong className="text-[#EE0033]">TOP 3</strong> chuỗi bán lẻ lớn nhất Việt Nam
                   </span>
@@ -675,15 +541,15 @@ export default function TuongLaiPage() {
                 ĐA DẠNG SẢN PHẨM –<br />DỊCH VỤ
               </h4>
               <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#EE0033] mt-1 shrink-0">•</span>
+                <li className="flex items-start gap-2 text-left">
+                  <span className="text-[#EE0033] shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                   <span style={{ color: '#111', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                     Phát triển hệ sinh thái đa dạng:<br />
                     Công nghệ – Tài chính – Giáo dục – Sức khỏe – Giải trí – Smart Home
                   </span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#EE0033] mt-1 shrink-0">•</span>
+                <li className="flex items-start gap-2 text-left">
+                  <span className="text-[#EE0033] shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                   <span style={{ color: '#111', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                     Không ngừng mở rộng danh mục sản phẩm và dịch vụ mới
                   </span>
@@ -720,20 +586,20 @@ export default function TuongLaiPage() {
                 ĐA KÊNH – DẪN ĐẦU<br />ONLINE
               </h4>
               <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#EE0033] mt-1 shrink-0">•</span>
+                <li className="flex items-start gap-2 text-left">
+                  <span className="text-[#EE0033] shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                   <span style={{ color: '#111', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                     Kênh online là trụ cột tăng trưởng
                   </span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#EE0033] mt-1 shrink-0">•</span>
+                <li className="flex items-start gap-2 text-left">
+                  <span className="text-[#EE0033] shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                   <span style={{ color: '#111', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                     Dẫn đầu thương mại điện tử
                   </span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#EE0033] mt-1 shrink-0">•</span>
+                <li className="flex items-start gap-2 text-left">
+                  <span className="text-[#EE0033] shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                   <span style={{ color: '#111', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                     Phát triển đồng bộ các kênh:<br />
                     Cửa hàng – Online – KHDN – Affiliate – Bán hàng tự động
@@ -824,7 +690,7 @@ export default function TuongLaiPage() {
                   "Tự động hóa vận hành, tối ưu hiệu quả"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-left">
-                    <span className="text-white mt-1 shrink-0">•</span>
+                    <span className="text-white shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                     <span style={{ color: '#FFF', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                       {item}
                     </span>
@@ -868,7 +734,7 @@ export default function TuongLaiPage() {
                   "Nghiên cứu mở rộng ra thị trường quốc tế và phát triển mô hình bán lẻ mới"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-left">
-                    <span className="text-white mt-1 shrink-0">•</span>
+                    <span className="text-white shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                     <span style={{ color: '#FFF', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                       {item}
                     </span>
@@ -912,7 +778,7 @@ export default function TuongLaiPage() {
                   "Đội ngũ phục vụ chuyên nghiệp, tận tâm"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-left">
-                    <span className="text-white mt-1 shrink-0">•</span>
+                    <span className="text-white shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                     <span style={{ color: '#FFF', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                       {item}
                     </span>
@@ -1005,7 +871,7 @@ export default function TuongLaiPage() {
                   "Môi trường làm việc hiện đại, đãi ngộ cạnh tranh"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-left">
-                    <span className="text-[#EE0033] mt-1 shrink-0">•</span>
+                    <span className="text-[#EE0033] shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                     <span style={{ color: '#111', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                       {item}
                     </span>
@@ -1049,7 +915,7 @@ export default function TuongLaiPage() {
                   "Giữ vững bản lĩnh chính trị, phòng chống “tự diễn biến”, “tự chuyển hóa”"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-left">
-                    <span className="text-[#EE0033] mt-1 shrink-0">•</span>
+                    <span className="text-[#EE0033] shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                     <span style={{ color: '#111', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                       {item}
                     </span>
@@ -1093,7 +959,7 @@ export default function TuongLaiPage() {
                   "Bảo vệ chính trị nội bộ"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-left">
-                    <span className="text-[#EE0033] mt-1 shrink-0">•</span>
+                    <span className="text-[#EE0033] shrink-0" style={{lineHeight:"1.4",display:"inline-block"}}>•</span>
                     <span style={{ color: '#111', fontSize: '15px', fontFamily: 'Roboto', fontWeight: 400, lineHeight: '1.4' }}>
                       {item}
                     </span>
@@ -1116,7 +982,8 @@ export default function TuongLaiPage() {
       >
         {/* Red Overlay */}
         <div 
-          className="absolute inset-0 bg-[#EE0033] opacity-40 z-[1]"
+          className="absolute inset-0 z-[1]"
+          style={{ backgroundColor: 'rgba(104, 0, 22, 0.8)' }}
         />
         <WavyBackground />
 

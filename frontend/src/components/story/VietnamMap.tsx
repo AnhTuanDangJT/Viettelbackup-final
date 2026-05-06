@@ -329,20 +329,21 @@ export const VietnamMap = () => {
         </motion.div>
       ))}
 
-      {/* Pin Overlay Layer - Positioned exactly over the white dot ("box") */}
+      {/* Pin Overlay Layer - Tip of pin aligned to province dot */}
       <AnimatePresence>
         {hoveredProvince && (
           <div
             key={`pin-${hoveredProvince.id}`}
             className="absolute z-[999] pointer-events-none"
             style={{
-              // If dotX/dotY exist, center pin on dot. Otherwise fallback to province center.
+              // Center pin horizontally: dotX - half of pin width (68/2 = 34)
               left: hoveredProvince.dotX !== undefined && hoveredProvince.dotX !== null
-                ? hoveredProvince.left + hoveredProvince.dotX + 8.6 - 34
+                ? hoveredProvince.left + hoveredProvince.dotX - 34
                 : hoveredProvince.left + (parseFloat(hoveredProvince.width) / 2) - 34,
+              // Place pin so its bottom tip sits on dot
               top: (hoveredProvince.dotY !== undefined && hoveredProvince.dotY !== null
-                ? hoveredProvince.top + hoveredProvince.dotY + 10.5 - 41
-                : hoveredProvince.top + (parseFloat(hoveredProvince.height) / 2) - 41),
+                ? hoveredProvince.top + hoveredProvince.dotY - 65
+                : hoveredProvince.top + (parseFloat(hoveredProvince.height) / 2) - 65),
             }}
           >
             <MapPin name={hoveredProvince.name} />

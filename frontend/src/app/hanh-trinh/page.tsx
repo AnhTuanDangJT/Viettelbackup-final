@@ -64,7 +64,7 @@ const HonorsStyles = () => (
       color: #FFF !important;
       opacity: 0.9;
       position: absolute;
-      top: 40px;
+      top: 80px !important;
       left: 60px;
       z-index: 5;
       pointer-events: none;

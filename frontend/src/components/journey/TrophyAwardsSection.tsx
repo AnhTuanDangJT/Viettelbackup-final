@@ -39,7 +39,7 @@ export const TrophyAwardsSection: React.FC = () => {
 
       {/* CONTENT */}
       <div className="mx-auto max-w-[1680px] px-8 relative z-10">
-        <div className="mb-16 relative inline-block ml-[208px]">
+        <div className="mb-16 relative inline-block ml-[208px] translate-y-[60px]">
           <h2 className="text-[#EE0033] text-[32px] md:text-[40px] lg:text-[48px] font-bold uppercase leading-tight font-beausans">
             CÚP VÀ GIẢI THƯỞNG
           </h2>

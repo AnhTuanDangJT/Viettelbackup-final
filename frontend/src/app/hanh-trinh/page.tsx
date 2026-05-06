@@ -548,7 +548,7 @@ export default function HanhTrinhPage() {
             })}
           </div>
 
-          <div className="flex justify-center gap-6 mt-8 relative z-30">
+          <div className="flex justify-center gap-6 relative z-30" style={{ transform: 'translateY(-40px)' }}>
             <button
               onClick={() => setAwardsActiveIndex((awardsActiveIndex - 1 + awards.length) % awards.length)}
               className="w-14 h-14 rounded-full bg-white flex items-center justify-center border border-gray-200 text-black hover:text-[#EE0033] shadow-lg hover:shadow-xl transition-all group"

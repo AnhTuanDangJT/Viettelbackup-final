@@ -174,14 +174,30 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.3;
 }
 
-/* Custom Scrollbar for Modal - Hidden but scrollable */
+/* Custom Scrollbar for Modal - Visible and styled */
 .custom-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db #f1f1f1;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari and Opera */
+  display: block;
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
 }
 
 

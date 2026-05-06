@@ -173,7 +173,7 @@ export function AboutUsRedSection() {
       <div className="relative z-[12] mx-auto max-w-[1440px] px-6 lg:px-0 py-12 lg:py-0 flex flex-col lg:block">
         {/* Header: VỀ CHÚNG TÔI */}
         <h2
-          className="relative lg:absolute font-beausans font-bold uppercase z-[10] text-[36px] sm:text-[42px] lg:text-[52px] lg:top-[31px] lg:left-[146px] lg:w-[760px]"
+          className="relative lg:absolute font-beausans font-bold uppercase z-[10] text-[36px] sm:text-[42px] lg:text-[52px] lg:top-[60px] lg:left-[146px] lg:w-[760px]"
           style={{
             color: '#F2F2F2',
             textAlign: 'left',

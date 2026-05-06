@@ -889,7 +889,7 @@ const provinces = [
     map: encodeURI("/images/provinces/lam_dong_thumb.png"),
     mapWithText: encodeURI("/images/provinces/lam_dong_thumb chữ.png"),
     stores: [
-      { id: "LDG01", img: "/images/hethongsieuthi/lamdong/ldg01.jpg", objectPosition: "center 60%" },
+      { id: "LDG-CH01", img: "/images/hethongsieuthi/lamdong/ldg01.jpg", objectPosition: "center 60%" },
       { id: "LDG02", img: "/images/hethongsieuthi/lamdong/LDG02.jpg", objectPosition: "center 40%" },
       { id: "LDG03", img: "/images/hethongsieuthi/lamdong/ldg03.jpg" },
       { id: "LDG04", img: "/images/hethongsieuthi/lamdong/LDG04.jpg", objectPosition: "center 30%" },

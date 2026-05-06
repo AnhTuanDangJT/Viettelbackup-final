@@ -90,26 +90,29 @@ export const MilestoneCircle = memo(({ milestone, onClick, isPriority = false }:
           className="text-[11px] sm:text-[13px] md:text-[14px] font-bold font-beausans text-[#FFF] text-left mb-2 md:mb-4 overflow-hidden"
           style={{
             width: '100%',
-            maxWidth: '101px',
+            maxWidth: '120px',
             lineHeight: '1.3',
             display: '-webkit-box',
-            WebkitLineClamp: 3,
+            WebkitLineClamp: 4,
             WebkitBoxOrient: 'vertical',
           }}
         >
           {milestone.title}
         </h4>
         <p 
-          className="text-[10px] sm:text-[11px] md:text-[13px] font-normal font-roboto text-[#D9D9D9] text-left overflow-hidden mb-1 md:mb-2 w-full max-w-[126px] h-[64px] sm:h-[80px] md:h-[104px]"
+          className="text-[10px] sm:text-[11px] md:text-[13px] font-normal font-roboto text-[#D9D9D9] text-left overflow-hidden mb-1 md:mb-2 w-full max-w-[126px]"
           style={{
-            lineHeight: 'normal',
+            lineHeight: '1.3',
+            display: '-webkit-box',
+            WebkitLineClamp: 7,
+            WebkitBoxOrient: 'vertical',
           }}
         >
           {milestone.description}
         </p>
 
         {/* Icon under text */}
-        <div className="mt-1 sm:mt-2 filter drop-shadow-[0_4px_6px_rgba(0,0,0,0.7)] hover:scale-110 transition-transform duration-300">
+        <div className="mt-auto mb-2 sm:mb-3 md:mb-4 filter drop-shadow-[0_4px_6px_rgba(0,0,0,0.7)] hover:scale-110 transition-transform duration-300">
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="34" 

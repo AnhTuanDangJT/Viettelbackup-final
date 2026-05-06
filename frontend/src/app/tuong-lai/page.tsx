@@ -36,7 +36,7 @@ const WavyBackground = () => (
 const heroSlides = [
   "/images/tuong-lai/slideshow/s1.png",
   "/images/tuong-lai/slideshow/s2.png",
-  "/images/tuong-lai/slideshow/s3.png",
+  "/images/tuong-lai/slideshow/s3_v2.png",
   "/images/tuong-lai/slideshow/s4.png",
   "/images/tuong-lai/slideshow/s5.png",
   "/images/tuong-lai/slideshow/s6.png",

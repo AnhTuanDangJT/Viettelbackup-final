@@ -228,17 +228,7 @@ export const ProvinceModal: React.FC<ProvinceModalProps> = ({
                   </p>
                 </div>
 
-                {/* Pagination Dots */}
-                {hasMultipleStories && (
-                  <div className="flex flex-row gap-2 mt-auto pt-4 justify-center">
-                    {stories.map((_, idx) => (
-                      <div 
-                        key={idx}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'bg-[#ED1C24] w-6' : 'bg-gray-300'}`}
-                      />
-                    ))}
-                  </div>
-                )}
+
               </div>
 
               {/* Right Column: Picture */}
@@ -269,6 +259,18 @@ export const ProvinceModal: React.FC<ProvinceModalProps> = ({
                 />
               </div>
             </div>
+
+            {/* Pagination Dots - Centered at the bottom of the card */}
+            {hasMultipleStories && (
+              <div className="flex flex-row gap-2 mt-auto pt-8 justify-center w-full">
+                {stories.map((_, idx) => (
+                  <div 
+                    key={idx}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === currentIndex ? 'bg-[#ED1C24] w-8' : 'bg-gray-400'}`}
+                  />
+                ))}
+              </div>
+            )}
           </motion.div>
         </div>
       )}

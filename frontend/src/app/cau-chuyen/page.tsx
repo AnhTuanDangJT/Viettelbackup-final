@@ -15,6 +15,9 @@ interface HeartPiece {
   h: number;
   img: string;
   pos?: string;
+  scale?: number;
+  translateX?: number;
+  translateY?: number;
 }
 
 const heartPieces: HeartPiece[] = [
@@ -31,7 +34,7 @@ const heartPieces: HeartPiece[] = [
   { id: "BOX-011", x: 904, y: 2422, w: 86, h: 86, img: basePathNew + "Bản sao của 8.webp" },
   { id: "BOX-012", x: 996, y: 2472, w: 114, h: 114, img: basePathChibo + "anh8.webp" },
   { id: "BOX-013", x: 1116, y: 2514, w: 72, h: 72, img: basePathNew + "Bản sao của 9.webp" },
-  { id: "BOX-014", x: 294, y: 2592, w: 228, h: 72, img: basePathChibo + "anh5.webp" },
+  { id: "BOX-014", x: 294, y: 2592, w: 228, h: 72, img: basePathChibo + "anh5.webp", pos: "center 60%" },
   { id: "BOX-015", x: 528, y: 2592, w: 150, h: 150, img: basePathChibo + "anh3.webp" },
   { id: "BOX-016", x: 684, y: 2592, w: 72, h: 72, img: basePathNew + "Bản sao của DSC00510.webp" },
   { id: "BOX-017", x: 762, y: 2592, w: 228, h: 228, img: basePathChibo + "anhmain.webp" },
@@ -44,7 +47,7 @@ const heartPieces: HeartPiece[] = [
   { id: "BOX-024", x: 450, y: 2748, w: 150, h: 150, img: basePathChibo + "anh2.webp" },
   { id: "BOX-025", x: 606, y: 2748, w: 72, h: 72, img: basePathNew + "z7749622513668_1a35e432b1292d9319551cb78361c139.webp" },
   { id: "BOX-026", x: 684, y: 2670, w: 72, h: 72, img: basePathNew + "z7749625211493_478bcf6f11d10f026fa4d0808514bfa4.webp" },
-  { id: "BOX-027", x: 685, y: 2748, w: 72, h: 72, img: basePathNew + "z7749625481581_df038ad664702526acdf65b1591480d5.webp" },
+  { id: "BOX-027", x: 685, y: 2748, w: 72, h: 72, img: basePathNew + "anhPhuNu.jpg" },
   { id: "BOX-028", x: 996, y: 2670, w: 122, h: 122, img: basePathChibo + "anh6.webp" },
   { id: "BOX-029", x: 1124, y: 2670, w: 72, h: 72, img: basePathNew + "14.webp" },
   { id: "BOX-030", x: 996, y: 2798, w: 72, h: 72, img: basePathNew + "21.webp" },
@@ -55,7 +58,7 @@ const heartPieces: HeartPiece[] = [
   { id: "BOX-035", x: 528, y: 2904, w: 72, h: 72, img: basePathNew + "IMG_0038.webp" },
   { id: "BOX-036", x: 606, y: 2904, w: 72, h: 72, img: basePathNew + "OK5A7255.webp" },
   { id: "BOX-037", x: 582, y: 2983, w: 96, h: 72, img: basePathNew + "DSC04322.webp" },
-  { id: "BOX-038", x: 684, y: 2904, w: 150, h: 150, img: basePathChibo + "anh4.webp" },
+  { id: "BOX-038", x: 684, y: 2904, w: 150, h: 150, img: basePathChibo + "anh4.webp", scale: 1.3, translateX: 10 },
   { id: "BOX-039", x: 684, y: 3060, w: 72, h: 72, img: basePathNew + "thị mai.webp" },
   { id: "BOX-040", x: 762, y: 3060, w: 72, h: 72, img: basePathNew + "Bản sao của 14.webp" },
   { id: "BOX-041", x: 840, y: 2983, w: 72, h: 72, img: basePathNew + "Bản sao của 4.webp" },
@@ -282,7 +285,10 @@ export default function CauChuyenPage() {
                               src={box.img}
                               fill
                               className="object-cover"
-                              style={{ objectPosition: box.pos || "center" }}
+                              style={{ 
+                                objectPosition: box.pos || "center",
+                                transform: `scale(${box.scale || 1}) translate(${box.translateX || 0}px, ${box.translateY || 0}px)`
+                              }}
                               alt={`Staff ${box.id}`}
                               loading="lazy"
                               unoptimized
@@ -378,13 +384,16 @@ export default function CauChuyenPage() {
                     >
                       <div className="flip-card-inner shadow-sm">
                         <div className="flip-card-front bg-white flex items-center justify-center" />
-                        <div className="flip-card-back bg-gray-200 overflow-hidden">
+                          <div className={`flip-card-back ${box.id === 'BOX-038' ? 'bg-red-500' : 'bg-gray-200'} overflow-hidden`}>
                           {isActive && (
                             <Image
                               src={box.img}
                               fill
                               className="object-cover"
-                              style={{ objectPosition: box.pos || "center" }}
+                              style={{ 
+                                objectPosition: box.pos || "center",
+                                transform: `scale(${box.scale || 1})`
+                              }}
                               alt={`Staff ${box.id}`}
                               loading="lazy"
                               unoptimized

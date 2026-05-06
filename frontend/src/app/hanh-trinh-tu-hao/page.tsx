@@ -171,6 +171,8 @@ export default function ProudJourneyPage() {
 
 
   const awards = [
+    { year: "2026", title: "BẰNG KHEN THỦ TƯỚNG CHÍNH PHỦ", desc: "Quyết định số: 486/QĐ-TTg ngày 15/05/2026 của Thủ tướng Chính phủ." },
+    { year: "2026", title: "VIETTEL STAR TOÀN CẦU", desc: "Vinh danh đơn vị xuất sắc nhất Tập đoàn trong phong trào thi đua năm 2025." },
     { year: "2025", title: "CỜ THI ĐUA TẬP ĐOÀN", desc: "Quyết định số: 16704/QĐ-CNVTQĐ ngày 31/12/2025 của Tập đoàn Công nghiệp - Viễn thông Quân đội" },
     { year: "2024", title: "LAO ĐỘNG XUẤT SẮC", desc: "Quyết định số: 15316/QĐ-CNVTQĐ ngày 25/12/2024 của Tập đoàn Công nghiệp - Viễn thông Quân đội" },
     { year: "2024", title: "BẰNG KHEN BỘ QUỐC PHÒNG", desc: "Quyết định số: 3692/QĐ-BQP ngày 21/08/2024 của Bộ trưởng Bộ Quốc phòng." },
@@ -460,7 +462,7 @@ export default function ProudJourneyPage() {
         </div>
 
         <div className="honors-container">
-          <h2 className="honors-title">DANH HIỆU</h2>
+          <h2 className="honors-title">DANH HIỆU GIAI ĐOẠN 2021 ĐẾN NAY</h2>
 
           <div className="honors-carousel">
             {awards.map((award, i) => {
@@ -499,7 +501,7 @@ export default function ProudJourneyPage() {
             })}
           </div>
 
-          <div className="flex justify-center gap-6 mt-8 relative z-30">
+          <div className="flex justify-center gap-6 relative z-30" style={{ transform: 'translateY(-40px)' }}>
             <button
               onClick={() => setAwardsActiveIndex((awardsActiveIndex - 1 + awards.length) % awards.length)}
               className="w-14 h-14 rounded-full bg-white flex items-center justify-center border border-gray-200 text-black hover:text-[#EE0033] shadow-lg hover:shadow-xl transition-all group"

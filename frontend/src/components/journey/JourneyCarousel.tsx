@@ -71,9 +71,9 @@ export const JourneyCarousel = () => {
         <button
           onClick={onPrev}
           aria-label="Mốc trước"
-          className="w-12 h-12 rounded-full border border-[#EE0033] text-[#EE0033] hover:bg-[#EE0033] hover:text-white transition-colors inline-flex items-center justify-center"
+          className="w-16 h-16 rounded-full bg-white text-gray-600 shadow-[0_4px_20px_rgba(0,0,0,0.4)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.6)] transition-all duration-300 inline-flex items-center justify-center"
         >
-          <ChevronLeft size={20} />
+          <ChevronLeft size={32} />
         </button>
         <div className="flex items-center gap-2">
           {journeyData.map((_, i) => (
@@ -90,9 +90,9 @@ export const JourneyCarousel = () => {
         <button
           onClick={onNext}
           aria-label="Mốc tiếp theo"
-          className="w-12 h-12 rounded-full border border-[#EE0033] text-[#EE0033] hover:bg-[#EE0033] hover:text-white transition-colors inline-flex items-center justify-center"
+          className="w-16 h-16 rounded-full bg-white text-gray-600 shadow-[0_4px_20px_rgba(0,0,0,0.4)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.6)] transition-all duration-300 inline-flex items-center justify-center"
         >
-          <ChevronRight size={20} />
+          <ChevronRight size={32} />
         </button>
       </div>
     </div>

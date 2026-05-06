@@ -87,7 +87,7 @@ export const JourneyGrid: React.FC = () => {
   };
 
   return (
-    <div className="w-full relative pt-6 flex flex-col items-center overflow-hidden">
+    <div className="w-full relative pt-6 pb-6 flex flex-col items-center overflow-hidden">
       <div className="w-full flex justify-center min-h-[300px] md:min-h-[660px]">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
@@ -141,10 +141,10 @@ export const JourneyGrid: React.FC = () => {
       <div className="mt-8 flex items-center justify-center gap-4">
         <button
           onClick={() => paginate(-1)}
-          className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#EE0033] hover:text-[#EE0033] transition-all duration-300"
+          className="w-12 h-12 rounded-full bg-white text-gray-600 hover:text-[#EE0033] shadow-[0_4px_15px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-300 flex items-center justify-center"
           aria-label="Previous Page"
         >
-          <ChevronLeft size={20} />
+          <ChevronLeft size={22} />
         </button>
 
         <div className="flex gap-2.5 items-center">
@@ -165,10 +165,10 @@ export const JourneyGrid: React.FC = () => {
 
         <button
           onClick={() => paginate(1)}
-          className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#EE0033] hover:text-[#EE0033] transition-all duration-300"
+          className="w-12 h-12 rounded-full bg-white text-gray-600 hover:text-[#EE0033] shadow-[0_4px_15px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all duration-300 flex items-center justify-center"
           aria-label="Next Page"
         >
-          <ChevronRight size={20} />
+          <ChevronRight size={22} />
         </button>
       </div>
     </div>

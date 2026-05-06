@@ -114,7 +114,7 @@ export const journeyData: Milestone[] = [
     year: "2013",
     title: "Tái cấu trúc để bứt phá",
     description: "Tập trung nguồn lực vào ngành hàng cốt lõi, tối ưu chiến lược phát triển.",
-    image: "/images/journey/milestones/2013.jpeg",
+    image: "/images/journey/milestones/2013.jpg",
     events: [
       {
         date: "01/2013",
@@ -135,7 +135,7 @@ export const journeyData: Milestone[] = [
     year: "2014",
     title: "Tinh gọn để hiệu quả hơn",
     description: "Điều chỉnh mô hình vận hành nhằm nâng cao hiệu suất và chuyên môn hóa.",
-    image: "/images/journey/milestones/2014.jpeg",
+    image: "/images/journey/milestones/2014.jpg",
     events: [
       {
         date: "2014",
@@ -148,7 +148,7 @@ export const journeyData: Milestone[] = [
     year: "2015",
     title: "Chuyển mình trong kỷ nguyên số",
     description: "Ra mắt kênh thương mại điện tử, mở ra hành trình bán lẻ đa kênh.",
-    image: "/images/journey/milestones/2015.jpeg",
+    image: "/images/journey/milestones/2015.jpg",
     modalImage: "/images/journey/milestones/2015_modal.jpg",
     events: [
       {
@@ -235,11 +235,11 @@ export const journeyData: Milestone[] = [
     year: "2021",
     title: "Tái định vị – Một diện mạo mới",
     description: "Chính thức mang tên Viettel Store với nhận diện thương hiệu mới.",
-    image: "/images/journey/milestones/2021.jpg",
+    image: "/images/journey/milestones/2021.png",
     events: [
       {
-        date: "17/05/2021",
-        content: "Chính thức thay đổi nhận diện thương hiệu theo chuẩn mới của Tập đoàn với tên gọi Viettel Store và slogan \"Your way\"."
+        date: "2021",
+        content: "Viettel Store thay đổi bộ nhận diện thương hiệu theo chuẩn mới của Tập đoàn với gam màu đỏ chủ đạo, thể hiện sức trẻ, sự đam mê, và khát khao sáng tạo, khẳng định vị thế nhà cung cấp dịch vụ số"
       },
       {
         date: "15/12/2021",
@@ -252,7 +252,7 @@ export const journeyData: Milestone[] = [
     year: "2022",
     title: "Số hóa toàn diện",
     description: "Đẩy mạnh chuyển đổi số toàn diện trong mọi hoạt động vận hành và kinh doanh.",
-    image: "/images/journey/milestones/2022.jpg",
+    image: "/images/journey/milestones/2022.png",
     events: [
       {
         date: "2022",

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MapPin } from "./MapPin";
 import { ProvinceModal } from "./ProvinceModal";
@@ -30,6 +30,19 @@ export const VietnamMap = () => {
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Preload province images on hover so modal opens instantly
+  const handleProvinceHover = useCallback((provinceId: string | null) => {
+    setHoveredProvinceId(provinceId);
+    if (provinceId && provincesContent[provinceId]?.stories) {
+      provincesContent[provinceId].stories.forEach((story) => {
+        if (story.image) {
+          const img = new window.Image();
+          img.src = story.image;
+        }
+      });
+    }
   }, []);
 
   const hoveredProvince = provinces.find(p => p.id === hoveredProvinceId);
@@ -312,8 +325,8 @@ export const VietnamMap = () => {
                 }>, { 
                   width: "100%", 
                   height: "100%",
-                  onMouseEnter: () => setHoveredProvinceId(province.id),
-                  onMouseLeave: () => setHoveredProvinceId(null),
+                  onMouseEnter: () => handleProvinceHover(province.id),
+                  onMouseLeave: () => handleProvinceHover(null),
                   onClick: (e: React.MouseEvent) => {
                     e.stopPropagation();
                     if (["da-nang", "tay-ninh", "lai-chau", "dien-bien", "cao-bang", "hung-yen", "lang-son"].includes(province.id)) return;

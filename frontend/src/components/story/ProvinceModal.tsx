@@ -255,6 +255,7 @@ export const ProvinceModal: React.FC<ProvinceModalProps> = ({
                   src={currentStory?.image || '/images/story-map/province-preview.png'}
                   alt={currentStory?.subheader || provinceName || "Province Image"}
                   fill
+                  priority
                   className="object-cover"
                 />
               </div>
